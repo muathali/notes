@@ -288,6 +288,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#structure-an-angular-app" class="md-nav__link">
+    Structure an Angular App
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -449,6 +456,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#structure-an-angular-app" class="md-nav__link">
+    Structure an Angular App
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -503,6 +517,19 @@ If we want to apply multiple classes simultaneously, we can use the following sy
 <li><strong>ngFor</strong> iterates through a list of items and binds each item to a template.</li>
 <li><strong>ngSwitch</strong> switches between templates within a specific set and displays each one depending on a condition</li>
 </ul>
+<h2 id="structure-an-angular-app">Structure an Angular App</h2>
+<p>How to create an Angular application that is correctly structured to enforce separation of concerns using modules and services
+An Angular module is a TypeScript class marked with the @NgModule decorator, which defines the following properties:</p>
+<ul>
+<li><strong>declarations</strong>: The components, directives, and pipes that are registered with the module.</li>
+<li><strong>imports</strong>: Other modules that contain declarations to be used by this module. The Angular CLI defines CommonModule automatically for us in this property. It is a module that is always used in Angular applications because it contains all the built-in directives and pipes that we usually would like to use.</li>
+<li><strong>exports</strong>: Angular artifacts that are defined in declarations and are available for other modules to use. This is the public API of the module. It defines what is publicly accessible or not. Everything else that's not explicitly exported would be considered private or internal to the module.</li>
+<li><strong>providers</strong>: Services that are provided from the module and are accessible from any module of the application. We'll learn more about providers in the How dependency injection works in Angular section.</li>
+<li><strong>bootstrap</strong>: The main component of the application that will be rendered when the application starts up. This property is set only once in the main application module, AppModule, and is usually AppComponent. Typically, you should not change it unless there is a particular reason to do so.Important NoteThe main application module, AppModule, does not need to import CommonModule. Instead, it imports BrowserModule, which is used to run Angular applications in a browser platform that exports CommonModule by itself.</li>
+</ul>
+<blockquote>
+<p>When creating a new Angular application, the first step is to define the different features our application needs. We should keep in mind that each one should make sense on its own in isolation from the others. Once we've defined the set of features required, we will create a module for each one. Each module will then be filled with the components, directives, pipes, and services that shape the feature it represents. Always remember the principles of encapsulation and reusability when defining your feature set. The second step is to start creating components that will be used to visualize the features on the screen.</p>
+</blockquote>
                 
               
               
