@@ -329,6 +329,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reactive-functional-programming-in-angular" class="md-nav__link">
+    Reactive functional programming in Angular
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -359,18 +366,24 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../aws-glue/" class="md-nav__link">
-        Glue
-      </a>
-    </li>
-  
-
     
+    <li class="md-nav__item md-nav__item--nested">
       
       
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
-
+      <label class="md-nav__link" for="__nav_4">
+        Azure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Azure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Azure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
   
   
   
@@ -381,6 +394,12 @@
     </li>
   
 
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
       
       
@@ -389,10 +408,37 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        AWS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="AWS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          AWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
-      <a href="https://www.linkedin.com/in/muath-ali/" class="md-nav__link">
-        About
+      <a href="../aws-glue/" class="md-nav__link">
+        Glue
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -531,6 +577,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reactive-functional-programming-in-angular" class="md-nav__link">
+    Reactive functional programming in Angular
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -622,6 +675,7 @@ export class HeroService {
 <p>An observable is an object that maintains a list of dependents, called observers, and informs them about state and data changes by emitting events asynchronously. To do so, the observable implements all of the machinery that it needs to produce and emit such events. It can be fired and canceled any time, regardless of whether it has emitted the expected data already</p>
 <p>Observables return a stream of events, and our subscribers receive prompt notification of those events so that they can act accordingly. They do not perform an asynchronous operation and die (although we can configure them to do so), but start a stream of continuous events on which we can subscribe.</p>
 <p>That's not all, however. This stream can be a combination of many operations before they hit observers subscribed to it. Just as we can manipulate arrays with methods such as map or filter to transform them, we can do the same with the stream of events that are emitted by observables. This is known as reactive functional programming, and Angular makes the most of this paradigm to handle asynchronous information.</p>
+<h2 id="reactive-functional-programming-in-angular">Reactive functional programming in Angular</h2>
                 
               
               
