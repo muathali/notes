@@ -295,6 +295,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dependency-injection" class="md-nav__link">
+    Dependency Injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promises" class="md-nav__link">
+    Promises
+  </a>
+  
+    <nav class="md-nav" aria-label="Promises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations-of-promises" class="md-nav__link">
+    Limitations of Promises
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observables" class="md-nav__link">
+    Observables
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -463,6 +497,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dependency-injection" class="md-nav__link">
+    Dependency Injection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promises" class="md-nav__link">
+    Promises
+  </a>
+  
+    <nav class="md-nav" aria-label="Promises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limitations-of-promises" class="md-nav__link">
+    Limitations of Promises
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observables" class="md-nav__link">
+    Observables
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -530,6 +598,30 @@ An Angular module is a TypeScript class marked with the @NgModule decorator, whi
 <blockquote>
 <p>When creating a new Angular application, the first step is to define the different features our application needs. We should keep in mind that each one should make sense on its own in isolation from the others. Once we've defined the set of features required, we will create a module for each one. Each module will then be filled with the components, directives, pipes, and services that shape the feature it represents. Always remember the principles of encapsulation and reusability when defining your feature set. The second step is to start creating components that will be used to visualize the features on the screen.</p>
 </blockquote>
+<h2 id="dependency-injection">Dependency Injection</h2>
+<p>Angular components are responsible for the presentation logic and should not be concerned with how to get data, either from a static list or a remote endpoint. They only need to display it in the template. Thus, they delegate business logic to services to handle this type of task.</p>
+<p>An Angular service, by default, is not registered with a specific module like components, directives, and pipes are. Instead, it is registered with an injector – the root injector of the Angular application – as defined in the providedIn option</p>
+<pre><code class="language-typescript">import { Injectable } from '@angular/core';
+@Injectable({
+  providedIn: 'root'
+})
+export class HeroService {
+  constructor() { }
+}
+</code></pre>
+<h2 id="promises">Promises</h2>
+<p>Promises introduce a new way of envisioning asynchronous data management by conforming to a neater and more solid interface. Different asynchronous operations can be chained at the same level and even be split and returned from other functions</p>
+<h3 id="limitations-of-promises">Limitations of Promises</h3>
+<ul>
+<li>They cannot be canceled.</li>
+<li>They are immediately executed.</li>
+<li>They are one-time operations only; there is no easy way to retry them.</li>
+<li>They respond with only one value.</li>
+</ul>
+<h2 id="observables">Observables</h2>
+<p>An observable is an object that maintains a list of dependents, called observers, and informs them about state and data changes by emitting events asynchronously. To do so, the observable implements all of the machinery that it needs to produce and emit such events. It can be fired and canceled any time, regardless of whether it has emitted the expected data already</p>
+<p>Observables return a stream of events, and our subscribers receive prompt notification of those events so that they can act accordingly. They do not perform an asynchronous operation and die (although we can configure them to do so), but start a stream of continuous events on which we can subscribe.</p>
+<p>That's not all, however. This stream can be a combination of many operations before they hit observers subscribed to it. Just as we can manipulate arrays with methods such as map or filter to transform them, we can do the same with the stream of events that are emitted by observables. This is known as reactive functional programming, and Angular makes the most of this paradigm to handle asynchronous information.</p>
                 
               
               
