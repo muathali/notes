@@ -114,3 +114,5 @@ An observable is an object that maintains a list of dependents, called observers
 Observables return a stream of events, and our subscribers receive prompt notification of those events so that they can act accordingly. They do not perform an asynchronous operation and die (although we can configure them to do so), but start a stream of continuous events on which we can subscribe.
 
 That's not all, however. This stream can be a combination of many operations before they hit observers subscribed to it. Just as we can manipulate arrays with methods such as map or filter to transform them, we can do the same with the stream of events that are emitted by observables. This is known as reactive functional programming, and Angular makes the most of this paradigm to handle asynchronous information.
+
+## Reactive functional programming in Angular

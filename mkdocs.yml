@@ -1,10 +1,12 @@
 site_name: Muath's Notes
 site_url: https://example.com/
 nav:
-    - Home: index.md
-    - Angular: angular.md
-    - Streams: streams.md
-    - Glue: aws-glue.md
-    - Azure VMs: azure-vm.md
-    - About: 'https://www.linkedin.com/in/muath-ali/'
-theme: material
+  - Home: index.md
+  - Angular: angular.md
+  - Streams: streams.md
+  - 'Azure':
+    - 'Azure VMs': azure-vm.md
+  - 'AWS':
+    - 'Glue': aws-glue.md
+
+theme: readthedocs
