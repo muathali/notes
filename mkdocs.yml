@@ -8,5 +8,7 @@ nav:
     - 'Azure VMs': azure-vm.md
   - 'AWS':
     - 'Glue': aws-glue.md
+  - 'App Security':
+    - 'OAuth2': oauth2.md
 
-theme: readthedocs
+theme: material
