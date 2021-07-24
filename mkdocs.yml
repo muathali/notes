@@ -3,15 +3,17 @@ site_url: https://example.com/
 
 nav:
   - Home: index.md
-  - Angular: angular.md
-  - Angular Material: angular-material.md
-  - Streams: streams.md
   - 'Azure':
     - 'Azure VMs': azure-vm.md
   - 'AWS':
     - 'Glue': aws-glue.md
   - 'App Security':
     - 'OAuth2': oauth2.md
+  - Streams: streams.md
+  - 'Angular':
+    - 'Learning Angular': angular/learning-angular.md
+    - 'Angular Material': angular/angular-material.md
+  - Docker: docker.md
 
 theme:
   name: material
