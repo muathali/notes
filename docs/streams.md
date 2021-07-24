@@ -16,3 +16,13 @@ Processing unbounded data often requires that events are ingested in a specific 
 
 Bounded streams can be processed by ingesting all data before performing any computations.
 Ordered ingestion is not required to process bounded streams because a bounded data set can always be sorted. Processing of bounded streams is also known as batch processing.
+
+## ksqlDB
+
+```sql
+create stream orders_stream (orderId int, product VARCHAR) WITH (KAFKA_TOPIC='streaming.orders.input', VALUE_FORMAT='JSON');
+
+select * from orders_stream emit changes;
+
+SET 'auto.offset.reset'='earliest';
+```
