@@ -7,6 +7,7 @@ nav:
     - 'Azure VMs': azure-vm.md
   - 'AWS':
     - 'Glue': aws-glue.md
+    - 'Date Pipeline': aws-data-pipeline.md
   - 'App Security':
     - 'OAuth2': oauth2.md
   - Streams: streams.md
