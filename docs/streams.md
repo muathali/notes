@@ -6,7 +6,6 @@
 create stream orders_stream (orderId int, product VARCHAR)
    WITH (KAFKA_TOPIC='streaming.orders.input', VALUE_FORMAT='JSON');
 
-
 SET 'auto.offset.reset'='earliest';
 
 select * from orders_stream emit changes;
