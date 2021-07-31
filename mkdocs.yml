@@ -3,19 +3,21 @@ site_url: https://example.com/
 
 nav:
   - Home: index.md
-  - 'Azure':
-    - 'Azure VMs': azure-vm.md
-  - 'AWS':
-    - 'Glue': aws-glue.md
-    - 'Date Pipeline': aws-data-pipeline.md
-  - 'App Security':
-    - 'OAuth2': oauth2.md
-  - Streams: streams.md
   - 'Angular':
     - 'Learning Angular': angular/learning-angular.md
     - 'Angular Material': angular/angular-material.md
+  - 'AWS':
+    - 'Glue': aws/aws-glue.md
+    - 'Date Pipeline': aws/aws-data-pipeline.md
+  - 'Azure':
+    - 'General': azure/general.md
+    - 'Azure VMs': azure/azure-vm.md
+  - 'FCP':
+    - 'Introduction': fcp/intro.md
   - Docker: docker.md
   - Mac OS: mac-os.md
+  - Streams: streams.md
+
 
 theme:
   name: material

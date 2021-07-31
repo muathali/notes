@@ -40,8 +40,8 @@ Can be integrated via S3 interface
 
 ### Diagram shows how to setup a AWS Glue Crawler
 
-![Crawler](./aws-glue/aws-glue-crawler.png)
+![Crawler](./images/aws-glue-crawler.png)
 
 ### Diagram shows how to setup a AWS Glue Job
 
-![Glue Job](./aws-glue/aws-glue-job.png)
+![Glue Job](./images/aws-glue-job.png)
