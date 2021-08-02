@@ -299,7 +299,26 @@ t's possible to Overwrite with two points on a source clip and a third on the ti
 What's different? This isn't a connection above the Primary Storyline but a replacement of the clips currently on the Primary Storyline. This is not an easily reversible operation, and any clips or regions within the selection will be entirely overwritten. Why do this? Well, I confess that I almost never do. If you want to use the Primary Storyline rather than connecting clips, then I can see the appeal, but I find connecting a clip above does what I want and lets any audio from the primary be heard.
 One exception: you might want to Overwrite a clip into a connected Storyline. That's possible, but you'll have to select the Storyline (not a clip within the Storyline) before you press D or ⇧D. Again, that's not something I usually do, as I prefer to Replace — but that's coming up in the next chapter. Lastly, let's clarify copy and paste
 
-## Copy and paste
+### Copy and paste
 
 Copy and paste are key operations in many applications, and while they're here too, connections can complicate matters just a little. If you copy a connected clip, it'll stay connected when you paste it, which makes sense. And if you copy a Primary Storyline clip, it'll paste to the Primary Storyline, performing an Insert operation and potentially breaking up a clip under the Skimmer. All of that makes sense.
 If, however, you want to copy from the Primary Storyline and then paste as a connected clip, you'll need to use Edit > Paste as Connected Clip (Shift V) instead of a regular paste. There's no complementary operation to "paste as primary" but it's easy to do a regular paste and then drag it into the Primary Storyline if that's what you want.
+
+## Editing Tools
+
+You can use keys as a persistent switch, or a temporary one, as follows:
+
+- To switch to the Trim tool persistently (that is, until you switch to another tool), just press the T key and let it go.
+- To switch to the Trim tool temporarily, hold down the T key, perform your trimming operations, and then release the T key.
+
+If you're using the "temporary" strategy, your previously selected tool will be selected once you release the key. This technique works with all of the tool shortcuts.
+
+### Rolling an edit
+
+While a regular trim adjusts an In point or an Out point on a clip, a Roll edit adjusts the Out point on one clip and the In point on the next clip at the same time, by the same duration.
+
+While it works best on two neighboring clips in the Primary Storyline, it can also work on two clips in a connected storyline, or even on two independently connected clips that have no gap between them.
+
+Why would you want to do that? Because it lets you trade one clip's length against another without causing a ripple down the timeline. The first clip gets longer while the second clip gets shorter, and no other clips move at all.
+
+#### Performing a Roll edit
