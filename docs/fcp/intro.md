@@ -322,3 +322,21 @@ While it works best on two neighboring clips in the Primary Storyline, it can al
 Why would you want to do that? Because it lets you trade one clip's length against another without causing a ripple down the timeline. The first clip gets longer while the second clip gets shorter, and no other clips move at all.
 
 #### Performing a Roll edit
+
+Because one point isn't always enough, let's now try using a Roll edit to adjust two points, as follows:
+
+1. Press T to switch to the Trim tool.
+2. Hover over the point between two clips, and you'll see the cursor shown here
+3. Click and drag left or right to perform a Roll edit
+
+This time, you'll see both frames in the two-up display in the Viewer changing. You'll also notice that the overall length of the timeline stays the same and that no other clips are affected in any way. The Roll operation is therefore extremely helpful when you're getting closer to the end of an edit and you don't want to move things around anymore.
+
+As you might expect, you can only Roll a clip as far as the media allows. If you drag all the way to the start or end of a clip, you'll see a red clip edge that stops you moving any further
+
+While you probably won't have any trouble triggering the Roll operation, the Trim tool still actually allows you to perform a regular one-point trim operation — you just have to be more specific about where you place the mouse. As you move toward the center of where two edits meet, the cursor switches to indicate a two-point Roll, but if you move a little further toward either side, the cursor will change back to indicate a regular one-point trim
+
+To select two points for a Roll edit `press \` this selects both Out and In points around the playhead.
+The `\` key is to the right of `[` and `]` on North American keyboards, so it's physically nearby. It's entirely up to you if you prefer a hybrid mouse/keyboard approach or the keyboard-only way instead, but if you would prefer to hover with the mouse and then switch to the keyboard, be sure to activate Snapping (N)
+
+### Slipping and Sliding clips
+
