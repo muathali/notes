@@ -338,5 +338,28 @@ While you probably won't have any trouble triggering the Roll operation, the Tri
 To select two points for a Roll edit `press \` this selects both Out and In points around the playhead.
 The `\` key is to the right of `[` and `]` on North American keyboards, so it's physically nearby. It's entirely up to you if you prefer a hybrid mouse/keyboard approach or the keyboard-only way instead, but if you would prefer to hover with the mouse and then switch to the keyboard, be sure to activate Snapping (N)
 
-### Slipping and Sliding clips
+### Using a Slip edit
 
+With the Trim tool (T) selected, click on the middle of a clip (not near the left or right edges) and drag sideways to perform a Slip edit
+The moving filmstrips make this a natural operation. If you drag to the left, you'll use a later part of the clip, and if you drag to the right, you'll use an earlier part of the clip. You can tell what's happening by watching the filmstrip thumbnails, and the Viewer will show you the clip's new In point and Out point as you drag.
+
+There's a handy analogy here. Think of a clip on the timeline as a window that lets you see part of its whole source clip. The Slip operation lets you grab the whole source clip and move it backward and forward to reveal a different part of it. Rolling and one-point ripple-trim operations change the edges of this "window", but Slip doesn't — the timeline clip stays the same length, and you just use a different part of it.
+
+### Using a Slide edit
+
+You can think of a Slide edit as a Roll with a clip in the middle. When you Slide, you move the dragged clip to the left or right, but the clip you're dragging only moves in time, and its contents stay the same. The Out point of the previous clip and the In point of the next clip are both changed, as if those two clips are rolling neighbors. The clip in the middle is repositioned within the timeline, but otherwise it's unchanged. So, how do you do it? Here's how:
+
+With the Trim tool (T) selected, hold ⌥ and click on the middle of a clip (not near the left or right edges) and drag sideways to perform a Slide edit.
+
+Here, I'm ⌥-dragging the second clip, meaning that the Wide clip before and the close-up clip after are adjusted in a Slide operation. For many editors, this isn't a very common task because it actually crosses over neatly into a common operation with connected clips. If the active clip in this example were above the other clips — a connected clip rather than a Primary Storyline clip — then moving the clip left or right would give the same results as Sliding on the Primary Storyline.
+
+Indeed, if I know I'm going to shift a clip around in time to get it just right, I'd connect it above, and so I don't Slide very often at all. But if you do Slide, you'll see a two-up display in the Viewer, just as you do with Roll and Slip. There's no two-up display when you move a connected clip. Another reason to choose to Slide is that it simplifies your timeline, keeping the number of vertical clips to a minimum. While one or two layers of connected clips aren't a problem, an edit is easier to understand at a glance if it's simple, and it also means you don't need as much screen space to see your entire timeline.
+
+As with Roll and Slip, there's no two-up display for nudging with the comma and period keys. But you'll need the mouse at some point: there's no keyboard shortcut that can prepare a clip for a Slip or Slide nudging operation. To prepare for a keyboard-based Slip or Slide, you'll have to press T to switch to the Trim tool, and then do the following:
+
+- Click on the middle of a clip to prepare for a Slip operation
+- ⌥-click on the middle of a clip to prepare for a Slide operation
+
+Only then can you use comma and period, with or without ⇧, to Slip or Slide by 1 or 10 frames.
+
+## Softening audio with split edits (J- and L-cuts)
