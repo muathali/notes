@@ -363,3 +363,9 @@ As with Roll and Slip, there's no two-up display for nudging with the comma and 
 Only then can you use comma and period, with or without ⇧, to Slip or Slide by 1 or 10 frames.
 
 ## Softening audio with split edits (J- and L-cuts)
+
+Way back at the rough-cut stage, the emphasis was on making an edit sound good, and then to hide the edits with B-roll. That's still a great way to work, but split audio edits allow you to trim the audio and video components of a clip at different points from one another, allowing you to hear a speaker before you see them (J-cut) or hear them after you see them (L-cut)
+
+Cutting the audio and the video separately softens the edit, and (crucially) it's not something that's easy to do with simpler editing software. Using this technique will lift the quality of your edits, even if the client isn't quite sure why.
+
+### Expanding and collapsing audio
