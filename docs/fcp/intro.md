@@ -369,3 +369,39 @@ Way back at the rough-cut stage, the emphasis was on making an edit sound good, 
 Cutting the audio and the video separately softens the edit, and (crucially) it's not something that's easy to do with simpler editing software. Using this technique will lift the quality of your edits, even if the client isn't quite sure why.
 
 ### Expanding and collapsing audio
+
+Don't detach audio, unless you have a really good reason. The Detach Audio command is there, under the Clip menu, but it's rarely the right way to go because it makes it far too easy to move a clip's audio out of sync
+
+Instead, to separate the audio component of a clip temporarily, do the following
+Double-click on a clip's audio waveform in the timeline, or choose Clip > Expand Audio
+
+When you expand audio like this, the audio part of a clip (the visible waveform) jumps down from the video. If this is the first time a clip has been expanded, the video and audio edges will be aligned, but they can all now be edited — trimmed or Rolled — separately. Trimming and Rolling is the key to softening edits
+
+If you want to visually reunite expanded audio components, you can — through a feature called Collapse Audio. To use this, proceed as follows:
+Double-click on a clip's audio waveform in the timeline, or choose Clip > Collapse Audio
+
+Expanded audio will always keep its current length, so if you adjust the video component of a clip, nothing happens. However, a collapsed clip will remember any offset that its audio start and end points had while expanded, and any offset will be maintained if you trim the clip's unified start or end points after collapsing. This can mean that you would hear a different part of the clip, which may or may not be an issue
+
+If you're confused just where the audio is and want to expand everything, select the whole timeline (⌘A) and use the shortcut (⌃S) to perform Clip > Expand Audio for all clips at once. Conversely, repeat the ⌃S shortcut to Collapse Audio for all clips if you want to simplify
+
+### Overlapping audio edit points
+
+When you've taken out part of a clip of a person talking or want to run two clips of different people together, you'll probably want to slightly overlap the audio of the two clips to avoid problems. If there's a gap between the two clips, there can be an audible dip in volume as the background noise disappears, but with an overlap, this simply won't happen. Of course, some clips are easier to edit than others, and you'll experience many different issues in different jobs
+
+Overlapping two edits is often necessary to smooth out the edges of words, especially if you're having to extract good words that were said right next to bad words. If you've taken out a few extraneous words (an "um," an "ah," or more) from a single person's speech to create a tighter soundbite, you should find this process fairly simple, and it's been made easier with a new feature in 10.4.9:
+
+1. Use the Range Selection tool to select the unwanted part of a clip.
+2. Press delete to remove it.
+3. Select both clips at once, then press ⌥T (or Modify > Adjust Audio Fades > Crossfade) to add a Crossfade.
+
+The clip's fade handles are now activated, and the two clips are overlapped by a duration set in Preferences, under Editing. That might be enough; you can play it back to see whether it sounds good. From there, you can adjust the results with a more manual process if you wish:
+
+1. Expand the audio on each of the audio waveforms.
+2. Trim the audio components to include exactly the sections you want to use.
+3. Trim the video components to adjust the timing and how the audio clips overlap.
+4. Connect a B-roll cutaway above to disguise the jump cut.
+
+Don't be dishonest, but also don't be afraid to make a speaker sound smoother or more professional. Tweak as much as you want to — the cutaway hides all that mess
+
+### Fading audio edits
+
