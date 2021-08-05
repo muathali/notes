@@ -405,3 +405,88 @@ Don't be dishonest, but also don't be afraid to make a speaker sound smoother or
 
 ### Fading audio edits
 
+As you've seen, adding a Crossfade exposes a clip's fade handles, but every audio edge contains the same built-in fade handles. They allow you to fade that audio in or out and are a vital part of making audio edits seamless. Audio fades are also a good way to create a smooth transition between one music track and another.
+
+You should use fades on almost every audio edit, to make sure that every audio clip starts in silence and ends in silence. If an audio clip cuts in the middle of a noise, you can sometimes hear a click or a pop as the audio cuts in. To make applying audio fades easier, you can apply shortcuts (with Final Cut Pro > Commands > Customize, ⌥⌘K) to the following otherwise hidden commands:
+
+- Apply Audio Fades
+- Remove Audio Fades
+- Toggle Audio Fade In
+- Toggle Audio Fade Out
+
+While the handles are the same on each clip, a Crossfade defaults to the S-curve fade style, and a standard clip's edges will default to +3dB. You can choose your own style with a right-click on the handle.
+
+## Editing numerically and with the Precision Editor
+
+Not every editor will want to be precise; editing is, after all, an art more than it is a science. But from time to time, it can be useful to set the length of a clip (or all your clips) to a specific value, and if a client asks for "a second more on that clip", it's great to be able to achieve it in a click and four quick keystrokes (+, 1, period, return). The techniques you'll learn here cover editing with numbers, setting duration precisely, and looking deeper with the Precision Editor.
+
+### Trimming using numbers
+
+While the comma and period shortcuts move a selected edit point (or clip) by a single frame, you can use plus and minus with timecodes to move by any amount. To illustrate how to respond to the client who asks for "a second more," follow these steps:
+
+1. Select an Out point on one of your clips
+You could do this by simply clicking on the Out point, or by moving the playhead to that point with keys, then selecting it with the ] shortcut. While ] selects the Out point, use [ to select the In point, or \ to select both for a Roll edit
+
+2. Type +100, then return, which will result in The timecode display under the viewer will change when you type the "+"
+Movements to the right use a plus, and to the left use a minus. Timecode entry is interpreted differently, depending on how many characters you type, as follows:
+
+- If you enter one or two digits, you're talking in frames.
+- If you enter three or four digits, the first two digits are seconds and the last two are frames.
+- If you enter five or six digits, the first two digits are minutes, the next two are seconds, and the last two are frames.
+- If you enter a period (.), it counts as two zeros: "00".
+- If you enter a number greater than the number of units available (such as 80 frames or 65 seconds), then the extra amount is converted to the next unit up.
+
+In the timecode display underneath the Viewer, you'll see the result calculate itself as you type. Here are a few examples:
+
+- +215 = move the selected edit point 2 seconds and 15 frames to the right
+- +265 = move the selected edit point 4 seconds and 15 frames to the right (in a 25 frames per second (FPS) timeline, where 2 seconds and 65 frames = 4 seconds + 15 frames)
+- -50 = move the selected edit point 50 frames to the left (just over or just under two seconds, depending on the frame rate)
+- -2. = move the selected edit point 2 seconds to the left (in any frame rate)
+- +5.. = move the selected edit point 5 minutes to the right
+
+Depending on which edit point you select, either plus or minus could make a clip longer or shorter. In points moving to the left make a clip longer, as do Out points moving to the right. Roll edits, of course, make one clip longer while another gets shorter, so select the edit point(s) however you wish, and then type away.
+
+Moving a clip rather than an edit works in exactly the same way, but beware. Connected clips can move freely, but if you move a Primary Storyline clip with numbers, you'll be performing a Slide operation, stealing time from one clip and giving it to the clip on the other side.
+
+No matter what you want to move, you can use the following general-purpose precision workflow:
+
+1. Select an edit point on one of your clips with the Select tool, select two edit points with the Trim tool, or select a whole clip.
+2. Type plus or minus, then a timecode, then return.
+
+### Setting clip duration
+
+What if your client asks for a clip to be not "a second longer" but "exactly 4 seconds"? That's easy, but you'll need to use something other than plus or minus. The command is Modify > Change Duration but you'll use ⌃D. To set duration, do the following:
+
+Select one or more clips.
+Type ⌃D, then a timecode (without ⌃), then return. This will result in the timecode readout under the Viewer changes to show the new duration
+
+Here are some examples, remembering that you only hold ⌃ while pressing D, and you'll need to press return at the end of each one:
+
+- ⌃D4. = make the selected clip 4 seconds long, an absolute change
+- ⌃D+2. = make the selected clip 2 seconds longer, a relative change
+- ⌃D1 = make the selected clip 1 frame long — handy for time-lapses or animation sequences
+
+ You can very quickly fill a timeline with videos or stills of a certain length by selecting all the clips at once, and then do the following:
+
+1. Press E to append to the Timeline.
+2. Click on the Timeline pane.
+3. Press ⌘A to select all clips at once.
+4. Press ⌃D3. to set all clips to 3 seconds long.
+5. Press ⌘T to add the default Dissolve transition between all these clips, as illustrated in the following screenshot:
+
+### Moving to a specific timecode
+
+If you want to jump to a specific timecode on the timeline it's a similar process, but you'll need to activate the Move Playhead Position command before typing that timecode. The shortcut is ⌃P, and should be followed immediately by a timecode in seconds and frames.
+
+## Using the Precision Editor
+
+This separate editing mode provides a way to focus on just one edit at a time, to see how much additional media is available for the current edit, and to perform trims and Roll edits in existing and new ways. To enter this mode, simply double-click on an edit in your timeline, and to leave, press Escape
+
+The timeline now splits in two, with a line of gray boxes indicating Primary Storyline edits in the middle of the screen. One edit is active at a time, and earlier clips are shown above while later clips are shown below. You can switch to different edits in your timeline by clicking on them or by using the following shortcuts: semicolon or ↑ to go back, apostrophe or ↓ to go forward.
+
+Dragging on the gray boxes in the center of the current point performs a Roll edit, but in this mode, you can see what you'll be revealing because you can see the filmstrips for the unused parts of the prior and upcoming clips
+
+If you move the mouse up to access an Out point or down to access an In point, you can click and drag it left or right to perform a regular trim. Two less obvious ways to trim are to drag on either side of the upper or lower filmstrip to move the In or Out point, or even just click on the filmstrip to set that point as the new In or Out point. And all the nudging (comma, period), edge-selecting ([, ], \), Trim Start, Trim End, and Play Around Edit (⌥[, ⌥], ⇧/) shortcuts work here too.
+
+While some people simply never use this mode, it's a great way to visually verify every edit in your timeline. Also, if you're reviewing an edit with a client who really wants to know which media lies unseen, this is a great way to show them you're making the right choices. Still, if you don't like it, don't use it.
+
