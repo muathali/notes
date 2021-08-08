@@ -490,3 +490,6 @@ If you move the mouse up to access an Out point or down to access an In point, y
 
 While some people simply never use this mode, it's a great way to visually verify every edit in your timeline. Also, if you're reviewing an edit with a client who really wants to know which media lies unseen, this is a great way to show them you're making the right choices. Still, if you don't like it, don't use it.
 
+## Consider Your Options
+
+### Understanding Multicam footage
