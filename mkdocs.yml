@@ -3,17 +3,19 @@ site_url: https://example.com/
 
 nav:
   - Home: index.md
-  - 'Angular':
-    - 'Learning Angular': angular/learning-angular.md
-    - 'Angular Material': angular/angular-material.md
+  - 'Programming':
+    - 'Learning Angular': programming/learning-angular.md
+    - 'Angular Material': programming/angular-material.md
+    - 'C#': programming/csharp.md
   - 'AWS':
     - 'Glue': aws/aws-glue.md
     - 'Date Pipeline': aws/aws-data-pipeline.md
   - 'Azure':
     - 'General': azure/general.md
     - 'Azure VMs': azure/azure-vm.md
-  - 'FCP':
-    - 'Introduction': fcp/intro.md
+  - 'Photography':
+    - 'Final Cut Pro': photography/fcp.md
+    - 'Stunning Digital Photography': photography/sdp.md
   - Docker: docker.md
   - Mac OS: mac-os.md
   - Streams: streams.md
