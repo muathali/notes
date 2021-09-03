@@ -25,5 +25,3 @@ Cmd+Shift+M go to problems
 Ctrl + `  go to terminal
 
 In C#, every type can be categorized as a class, struct, enum, interface, or delegate. The C# keyword string is a class, but int is a struct. So, it is best to use the term type to refer to both.
-
-## Revealing the extent of the C# vocabulary

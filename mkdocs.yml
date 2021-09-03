@@ -20,7 +20,6 @@ nav:
   - Mac OS: mac-os.md
   - Streams: streams.md
 
-
 theme:
   name: material
   features:
