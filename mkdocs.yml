@@ -3,22 +3,25 @@ site_url: https://example.com/
 
 nav:
   - Home: index.md
+  - Architecture:
+    - 'Introduction': architecture/index.md
+    - 'Streaming': architecture/streams.md
   - 'Programming':
+    - 'C#': programming/csharp.md
     - 'Learning Angular': programming/learning-angular.md
     - 'Angular Material': programming/angular-material.md
-    - 'C#': programming/csharp.md
   - 'AWS':
     - 'Glue': aws/aws-glue.md
     - 'Date Pipeline': aws/aws-data-pipeline.md
   - 'Azure':
     - 'General': azure/general.md
     - 'Azure VMs': azure/azure-vm.md
-  - 'Photography':
-    - 'Final Cut Pro': photography/fcp.md
-    - 'Stunning Digital Photography': photography/sdp.md
-  - Docker: docker.md
-  - Mac OS: mac-os.md
-  - Streams: streams.md
+  - 'Tools':
+    - 'Docker': tools/docker.md
+    - 'Mac OS': tools/mac-os.md
+  - 'Light':
+    - 'Final Cut Pro': light/fcp.md
+    - 'Stunning Digital Photography': light/sdp.md
 
 theme:
   name: material
