@@ -9,21 +9,21 @@
       
       
       
-        <link rel="canonical" href="https://example.com/streams/">
+        <link rel="canonical" href="https://example.com/architecture/kafka/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>Streams - Muath's Notes</title>
+        <title>Kafka - Muath's Notes</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.1fe995fd.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -57,7 +57,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#streams" class="md-skip">
+        <a href="#kafka" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Muath&#39;s Notes" class="md-header__button md-logo" aria-label="Muath's Notes" data-md-component="logo">
+    <a href="../.." title="Muath&#39;s Notes" class="md-header__button md-logo" aria-label="Muath's Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Streams
+              Kafka
             
           </span>
         </div>
@@ -177,7 +177,7 @@
 
 
   <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -186,14 +186,16 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../angular/learning-angular/" class="md-tabs__link">
-        Angular
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Architecture
       </a>
     </li>
   
@@ -208,7 +210,23 @@
   
   
     <li class="md-tabs__item">
-      <a href="../aws/aws-glue/" class="md-tabs__link">
+      <a href="../../programming/csharp/" class="md-tabs__link">
+        Programming
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aws/aws-glue/" class="md-tabs__link">
         AWS
       </a>
     </li>
@@ -224,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../azure/general/" class="md-tabs__link">
+      <a href="../../azure/general/" class="md-tabs__link">
         Azure
       </a>
     </li>
@@ -240,8 +258,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../fcp/intro/" class="md-tabs__link">
-        FCP
+      <a href="../../tools/docker/" class="md-tabs__link">
+        Tools
       </a>
     </li>
   
@@ -252,37 +270,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../docker/" class="md-tabs__link">
-      Docker
-    </a>
-  </li>
-
-      
-        
   
   
-
-
-  <li class="md-tabs__item">
-    <a href="../mac-os/" class="md-tabs__link">
-      Mac OS
-    </a>
-  </li>
-
-      
-        
   
+    <li class="md-tabs__item">
+      <a href="../../light/fcp/" class="md-tabs__link">
+        Light
+      </a>
+    </li>
   
-    
-  
-
-
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
-      Streams
-    </a>
-  </li>
 
       
     </ul>
@@ -305,7 +301,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Muath&#39;s Notes" class="md-nav__button md-logo" aria-label="Muath's Notes" data-md-component="logo">
+    <a href="../.." title="Muath&#39;s Notes" class="md-nav__button md-logo" aria-label="Muath's Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -324,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -337,21 +333,23 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
-        Angular
+        Architecture
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Angular" data-md-level="1">
+      <nav class="md-nav" aria-label="Architecture" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Angular
+          Architecture
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -360,8 +358,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../angular/learning-angular/" class="md-nav__link">
-        Learning Angular
+      <a href="../" class="md-nav__link">
+        Introduction
       </a>
     </li>
   
@@ -372,9 +370,68 @@
   
   
     <li class="md-nav__item">
-      <a href="../angular/angular-material/" class="md-nav__link">
-        Angular Material
+      <a href="../streams/" class="md-nav__link">
+        Streaming
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Kafka
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Kafka
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-use-cases" class="md-nav__link">
+    Kafka Use Cases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#essentials" class="md-nav__link">
+    Essentials
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -399,13 +456,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        AWS
+        Programming
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="AWS" data-md-level="1">
+      <nav class="md-nav" aria-label="Programming" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          AWS
+          Programming
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -414,8 +471,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../aws/aws-glue/" class="md-nav__link">
-        Glue
+      <a href="../../programming/csharp/" class="md-nav__link">
+        C#
       </a>
     </li>
   
@@ -426,8 +483,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../aws/aws-data-pipeline/" class="md-nav__link">
-        Date Pipeline
+      <a href="../../programming/learning-angular/" class="md-nav__link">
+        Learning Angular
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programming/angular-material/" class="md-nav__link">
+        Angular Material
       </a>
     </li>
   
@@ -453,13 +522,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       <label class="md-nav__link" for="__nav_4">
-        Azure
+        AWS
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Azure" data-md-level="1">
+      <nav class="md-nav" aria-label="AWS" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Azure
+          AWS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -468,8 +537,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../azure/general/" class="md-nav__link">
-        General
+      <a href="../../aws/aws-glue/" class="md-nav__link">
+        Glue
       </a>
     </li>
   
@@ -480,8 +549,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../azure/azure-vm/" class="md-nav__link">
-        Azure VMs
+      <a href="../../aws/aws-data-pipeline/" class="md-nav__link">
+        Date Pipeline
       </a>
     </li>
   
@@ -507,13 +576,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
-        FCP
+        Azure
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="FCP" data-md-level="1">
+      <nav class="md-nav" aria-label="Azure" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          FCP
+          Azure
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -522,8 +591,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../fcp/intro/" class="md-nav__link">
-        Introduction
+      <a href="../../azure/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure/azure-vm/" class="md-nav__link">
+        Azure VMs
       </a>
     </li>
   
@@ -542,25 +623,49 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../tools/docker/" class="md-nav__link">
         Docker
       </a>
     </li>
   
 
-    
-      
-      
-      
-
+          
+            
   
   
   
     <li class="md-nav__item">
-      <a href="../mac-os/" class="md-nav__link">
+      <a href="../../tools/mac-os/" class="md-nav__link">
         Mac OS
       </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -571,92 +676,50 @@
 
   
   
+  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Streams
+      <label class="md-nav__link" for="__nav_7">
+        Light
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Light" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
+          Light
         </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Streams
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../light/fcp/" class="md-nav__link">
+        Final Cut Pro
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    </li>
+  
+
+          
+            
   
   
   
-    
+    <li class="md-nav__item">
+      <a href="../../light/sdp/" class="md-nav__link">
+        Stunning Digital Photography
+      </a>
+    </li>
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ksqldb-create-stream" class="md-nav__link">
-    ksqlDB - Create Stream
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ksql-command-line" class="md-nav__link">
-    KSQL Command Line
-  </a>
-  
-    <nav class="md-nav" aria-label="KSQL Command Line">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-topic" class="md-nav__link">
-    Create a topic
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-unbounded-and-bounded-data" class="md-nav__link">
-    Process Unbounded and Bounded Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unbounded-streams" class="md-nav__link">
-    Unbounded streams
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bounded-streams" class="md-nav__link">
-    Bounded streams
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -687,49 +750,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ksqldb-create-stream" class="md-nav__link">
-    ksqlDB - Create Stream
+  <a href="#kafka-use-cases" class="md-nav__link">
+    Kafka Use Cases
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ksql-command-line" class="md-nav__link">
-    KSQL Command Line
-  </a>
-  
-    <nav class="md-nav" aria-label="KSQL Command Line">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-a-topic" class="md-nav__link">
-    Create a topic
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#process-unbounded-and-bounded-data" class="md-nav__link">
-    Process Unbounded and Bounded Data
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unbounded-streams" class="md-nav__link">
-    Unbounded streams
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bounded-streams" class="md-nav__link">
-    Bounded streams
+  <a href="#essentials" class="md-nav__link">
+    Essentials
   </a>
   
 </li>
@@ -747,36 +776,28 @@
               
                 
                 
-                <h1 id="streams">Streams</h1>
-<h2 id="ksqldb-create-stream">ksqlDB - Create Stream</h2>
-<pre><code class="language-sql">create stream orders_stream (orderId int, product VARCHAR)
-   WITH (KAFKA_TOPIC='streaming.orders.input', VALUE_FORMAT='JSON');
-
-SET 'auto.offset.reset'='earliest';
-
-select * from orders_stream emit changes;
-
-confluent local services status
-confluent local services start
-confluent local services ksql-server start
-
-</code></pre>
-<h2 id="ksql-command-line">KSQL Command Line</h2>
-<h3 id="create-a-topic">Create a topic</h3>
-<pre><code class="language-bash">kafka-topics --bootstrap-server localhost:9092 --create --partitions 1 --replication-factor 1 --topic USERS
-</code></pre>
-<h2 id="process-unbounded-and-bounded-data">Process Unbounded and Bounded Data</h2>
-<p>Any kind of data is produced as a stream of events. Credit card transactions, sensor measurements, machine logs,
-or user interactions on a website or mobile application, all of these data are generated as a stream.</p>
-<p>Data can be processed as unbounded or bounded streams.</p>
-<h2 id="unbounded-streams">Unbounded streams</h2>
-<p>Unbounded streams have a start but no defined end. They do not terminate and provide data as it is generated.
-Unbounded streams must be continuously processed, i.e., events must be promptly handled after they have been ingested.
-It is not possible to wait for all input data to arrive because the input is unbounded and will not be complete at any point in time.
-Processing unbounded data often requires that events are ingested in a specific order, such as the order in which events occurred, to be able to reason about result completeness.</p>
-<h2 id="bounded-streams">Bounded streams</h2>
-<p>Bounded streams can be processed by ingesting all data before performing any computations.
-Ordered ingestion is not required to process bounded streams because a bounded data set can always be sorted. Processing of bounded streams is also known as batch processing.</p>
+                <h1 id="kafka">Kafka</h1>
+<p>The main purpose of Kafka is to decouple source and target systems so that we simplify integrations</p>
+<h2 id="kafka-use-cases">Kafka Use Cases</h2>
+<ul>
+<li>Messaging</li>
+<li>Activity Tracking</li>
+<li>Metrics &amp; Log Gathering</li>
+<li>Stream Processing (Stram API or Spark)</li>
+<li>Decouple Systems</li>
+<li>Integration with Spark, Flink, Storm, Hadoop and other Big Data technologoes.</li>
+</ul>
+<h2 id="essentials">Essentials</h2>
+<ul>
+<li>a Kafka Topic is split into <strong>Partitions</strong> (0, 1, 2 ...etc)</li>
+<li>Each Partition is Ordered</li>
+<li>Each message in a Partition gets an incremental id, called offset.</li>
+<li>Offset has a meaning within a Partition</li>
+<li>Order is guaranteed only within a Partition</li>
+<li>Data is kept for a limited time (default 1 week)</li>
+<li><strong>Once a data is written to a partition, it cannot be changed. (Immutability)</strong></li>
+<li>Data is assigned randomly to a partition unless a key is provided.</li>
+</ul>
                 
               
               
@@ -796,7 +817,7 @@ Ordered ingestion is not required to process bounded streams because a bounded d
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../mac-os/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Mac OS" rel="prev">
+        <a href="../streams/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Streaming" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -805,11 +826,26 @@ Ordered ingestion is not required to process bounded streams because a bounded d
               <span class="md-footer__direction">
                 Previous
               </span>
-              Mac OS
+              Streaming
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../../programming/csharp/" class="md-footer__link md-footer__link--next" aria-label="Next: C#" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              C#
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
@@ -832,10 +868,10 @@ Ordered ingestion is not required to process bounded streams because a bounded d
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
       
     
   </body>
