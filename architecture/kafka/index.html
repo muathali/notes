@@ -426,6 +426,87 @@
     Essentials
   </a>
   
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brokers" class="md-nav__link">
+    Brokers
+  </a>
+  
+    <nav class="md-nav" aria-label="Brokers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brokers-and-topics" class="md-nav__link">
+    Brokers and Topics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#producers" class="md-nav__link">
+    Producers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumers-and-consumer-groups" class="md-nav__link">
+    Consumers and Consumer Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Consumers and Consumer Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consumer-offsets" class="md-nav__link">
+    Consumer Offsets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-semantics-for-consumers" class="md-nav__link">
+    Delivery Semantics for consumers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-broker-discovery" class="md-nav__link">
+    Kafka Broker Discovery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zookeeper" class="md-nav__link">
+    Zookeeper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-guarantees" class="md-nav__link">
+    Kafka Guarantees
+  </a>
+  
 </li>
       
     </ul>
@@ -761,6 +842,87 @@
     Essentials
   </a>
   
+    <nav class="md-nav" aria-label="Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brokers" class="md-nav__link">
+    Brokers
+  </a>
+  
+    <nav class="md-nav" aria-label="Brokers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brokers-and-topics" class="md-nav__link">
+    Brokers and Topics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#producers" class="md-nav__link">
+    Producers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consumers-and-consumer-groups" class="md-nav__link">
+    Consumers and Consumer Groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Consumers and Consumer Groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consumer-offsets" class="md-nav__link">
+    Consumer Offsets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delivery-semantics-for-consumers" class="md-nav__link">
+    Delivery Semantics for consumers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-broker-discovery" class="md-nav__link">
+    Kafka Broker Discovery
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zookeeper" class="md-nav__link">
+    Zookeeper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-guarantees" class="md-nav__link">
+    Kafka Guarantees
+  </a>
+  
 </li>
       
     </ul>
@@ -797,6 +959,69 @@
 <li>Data is kept for a limited time (default 1 week)</li>
 <li><strong>Once a data is written to a partition, it cannot be changed. (Immutability)</strong></li>
 <li>Data is assigned randomly to a partition unless a key is provided.</li>
+</ul>
+<h3 id="brokers">Brokers</h3>
+<ul>
+<li>A Kafka cluster is composed of multiple brokers (servers)</li>
+<li>Each broker is identified with its Id (integer)</li>
+<li>Each broker contains certain topic partitions</li>
+<li>After connecting to any broker (called bootstrap broker), you will be connected to the entire cluster</li>
+</ul>
+<h4 id="brokers-and-topics">Brokers and Topics</h4>
+<ul>
+<li>At any time, only ONE broker can be the leader for a given partition, only that leader can receive and serve data for a partition.</li>
+<li>Therefore, each partition has one leader and multiple ISR (In-Sync replica)</li>
+</ul>
+<p><img alt="Topics and Partitions" src="../images/kafka-topics-partitions.png" /></p>
+<h3 id="producers">Producers</h3>
+<p><img alt="Producers" src="../images/kafka-producers.png" /></p>
+<p>Producers can choose to receive acknowledgement of data writes</p>
+<ol>
+<li>acks=0, Producer won't wait for acknowledgement</li>
+<li>acks=1 (default), Producer will wait for the leader to acknowledge</li>
+<li>acks=all, Leader and replica acknowledge</li>
+</ol>
+<p>Producers can choose to send a <strong>key</strong> with the message</p>
+<ul>
+<li>if key is not sent, data is sent round robin to the brokers</li>
+<li>if a key is sent, then all messages for that key will always go to the same partition (we get this guarantee thanks to key hashing which depends on the number of partition)</li>
+<li>a key is sent when we need message ordering for a specific field</li>
+</ul>
+<h3 id="consumers-and-consumer-groups">Consumers and Consumer Groups</h3>
+<ul>
+<li>Consumers read data in consumer groups</li>
+<li>Each consumer within a group reads data from an execlusive parition</li>
+<li>if you have more consumers than partitions, some will be inactive</li>
+</ul>
+<p><img alt="Consumer Groups" src="../images/kafka-consumer-groups.png" /></p>
+<h4 id="consumer-offsets">Consumer Offsets</h4>
+<ul>
+<li>Kafka stores the offsets at which a consumer group has been reading</li>
+<li>The offsets are committed live in a kafka topic name __consumer_offsets</li>
+<li>When a consumer has processed data received from kafka, it should be committing the offsets</li>
+<li>if a consumer dies, it will be able to read back from where it left off</li>
+</ul>
+<h4 id="delivery-semantics-for-consumers">Delivery Semantics for consumers</h4>
+<p>Consumers choose when to commit offsets, so there are 3 delivery semantics:</p>
+<ol>
+<li>At Most Once: offsets are committed as soon as the message is received, if processing goes wrong, the message will be lost.</li>
+<li>At least Once: offsets are committed after the message is processed, if processing goes wrong, the message will be read again. Make sure your processing is idempotent.</li>
+<li>Exactly Once: Can be achived for Kafka to Kafka workflows using Kafka Streams API</li>
+</ol>
+<h2 id="kafka-broker-discovery">Kafka Broker Discovery</h2>
+<p>Each broker knows about all brokers, topics and partitions (metadata), you need to connect to only one broker and the client is smart enough to work with the entire cluster</p>
+<h2 id="zookeeper">Zookeeper</h2>
+<ul>
+<li>Manages brokers and help performs leader election</li>
+<li>Zookeeper by design operates with an odd number of servers (3, 5, 7)</li>
+<li>has a leader that handles writes, the rest of the servers are followers (handle reads)</li>
+</ul>
+<h2 id="kafka-guarantees">Kafka Guarantees</h2>
+<ul>
+<li>Messages are appended to a topic-partition in the order they are sent</li>
+<li>Consumers read messages in the order stored in a topic partition</li>
+<li>with a replication factor of N, produces and consumers can tolerate up to N-1 brokers being down.</li>
+<li><strong>As long as the number of paritions remains constant for a topic (no new partitions), the same key will always go to the same partition</strong>.</li>
 </ul>
                 
               
