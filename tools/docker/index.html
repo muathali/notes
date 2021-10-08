@@ -387,6 +387,18 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/avro/" class="md-nav__link">
+        Avro
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -607,9 +619,46 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Docker
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#container-commands" class="md-nav__link">
+    Container Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -706,6 +755,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#container-commands" class="md-nav__link">
+    Container Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-commands" class="md-nav__link">
+    Other Commands
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -718,6 +789,7 @@
                 
                 
                 <h1 id="docker">Docker</h1>
+<h2 id="container-commands">Container Commands</h2>
 <table>
 <thead>
 <tr>
@@ -727,8 +799,63 @@
 </thead>
 <tbody>
 <tr>
-<td><code>docker run</code></td>
-<td>Runs an image in docker</td>
+<td><code>docker container run</code></td>
+<td>Runs an image in docker (new way)</td>
+</tr>
+<tr>
+<td><code>docker container run --publish  80:80 --detach nginx</code></td>
+<td>Detached ..</td>
+</tr>
+<tr>
+<td><code>docker container ls</code></td>
+<td>List running containers</td>
+</tr>
+<tr>
+<td><code>docker container stop &lt;container Id&gt;</code></td>
+<td>stops a running container</td>
+</tr>
+<tr>
+<td><code>docker container logs &lt;container Id&gt;</code></td>
+<td>print logs from container</td>
+</tr>
+<tr>
+<td><code>docker container inspect</code></td>
+<td>Get information about the container</td>
+</tr>
+<tr>
+<td><code>docker container stats</code></td>
+<td>Live stats about the container</td>
+</tr>
+<tr>
+<td><code>docker exec</code></td>
+<td>Execute a command on a running container</td>
+</tr>
+<tr>
+<td><code>docker run -it [container] bash</code></td>
+<td>Run container in interactive mode</td>
+</tr>
+<tr>
+<td><code>docker container port &lt;container id&gt;</code></td>
+<td>show port mapping</td>
+</tr>
+</tbody>
+</table>
+<h2 id="other-commands">Other Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker version</code></td>
+<td>Version information</td>
+</tr>
+<tr>
+<td><code>docker info</code></td>
+<td>Docker information</td>
 </tr>
 <tr>
 <td><code>docker ps</code></td>
@@ -759,16 +886,12 @@
 <td>Pulls image from registry</td>
 </tr>
 <tr>
-<td><code>docker exec</code></td>
-<td>Execute a command on a running container</td>
-</tr>
-<tr>
-<td><code>docker run -it [container] bash</code></td>
-<td>Run container in interactive mode</td>
-</tr>
-<tr>
 <td><code>docker build -t [image name] -f dockerfile .</code></td>
 <td>Builds a docker image</td>
+</tr>
+<tr>
+<td><code>docker ps --filter status=exited -q | xargs docker rm</code></td>
+<td>remove all stopped containers</td>
 </tr>
 </tbody>
 </table>

@@ -2,77 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/architecture/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/architecture/avro/</loc>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/architecture/kafka/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/architecture/streams/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/aws/aws-data-pipeline/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/aws/aws-glue/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/azure/azure-vm/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/azure/general/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/light/fcp/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/light/sdp/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/programming/angular-material/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/programming/csharp/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/programming/learning-angular/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tools/docker/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/tools/mac-os/</loc>
-         <lastmod>2021-09-15</lastmod>
+         <lastmod>2021-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
