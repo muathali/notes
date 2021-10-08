@@ -13,6 +13,7 @@ Command | Description
 `docker container stats` | Live stats about the container
 `docker exec` | Execute a command on a running container
 `docker run -it [container] bash` | Run container in interactive mode
+`docker container port <container id>` | show port mapping
 
 ## Other Commands
 

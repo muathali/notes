@@ -3,7 +3,7 @@
 Fully managed ETL, serverless architecture and tool
 
 - AWS Glue Crawler creates metadata in the data catalog
-- Generates Scala or Phyton code for Apache Spark using an ETL firendly UI
+- Generates Scala or Phyton code for Apache Spark using an ETL friendly UI
 - Jobs can be scheduled, run on demand, triggered from an event
 - Can specify job dependencies or run them in parallel
 
