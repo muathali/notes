@@ -1,6 +1,10 @@
 {
     "cSpell.enabled": true,
     "cSpell.words": [
-        "Protobuf"
+        "componentized",
+        "Omni",
+        "Protobuf",
+        "runtimes",
+        "struct"
     ]
 }
