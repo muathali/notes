@@ -10,7 +10,7 @@ Some of the popular data formats are CSV, JSON, Avro, Protocol Buffers among oth
 
 ## Why Avro
 
-Avro seems to be the preferred format when working with Kafka for a number of reasons:
+Avro is the preferred format when working with Kafka for a number of reasons:
 
 1. Avro is very compact compared to text based formats like CSV and JSON
 2. Fast Serialization
@@ -90,3 +90,42 @@ bytes | sequence of 8-bit unsigned bytes.
 string | Unicode character sequence.
 
 ### Complex Data Types of Avro
+
+Avro supports six complex types: `records`, `enums`, `arrays`, `maps`, `unions` and `fixed`. For more information see Avro specification [website](https://avro.apache.org/docs/current/spec.html)
+
+## Avro Schema Registry
+
+Schemas are important to allow multiple projects to collaborate on the same data, a schema registry provides a central location that applications can use to access and evolve schemas, some of the benefits of a schema registry are:
+
+- **Safe schema evolution**: schemas can change while maintaining forward and backward compatibility with previous versions, thus enabling producers and consumers to evolve independently.
+- **Efficiency**: data storage and processing is more efficient because you don’t need to store the field names, and numbers can be stored in their more efficient binary representation rather than parsed from text.
+- **Data Discovery**: It is easy to understand the content of a Kafka topic by looking at it's schema definition.
+
+![schema-registry](images/avro-schema-registry.svg)
+
+### Schema Evolution
+
+Applications may need to change the schema over time to support new features or accommodate changing business requirements, when this happens, it is important for downstream consumers to be able to handle data encoded with both the old and the new schema seamlessly.
+
+#### Compatibility Types
+
+The following table presents a summary of the types of schema changes allowed for the different compatibility types, for a given subject. The Confluent Schema Registry default compatibility type is `BACKWARD`
+
+Compatibility Type | Changes allowed | Check against which schemas | Upgrade first
+---------|----------|---------|---------
+ BACKWARD | Delete fields, Add optional fields  | Last version | Consumers
+ BACKWARD_TRANSITIVE | Delete fields, Add optional fields  | All Previous version | Consumers
+ FORWARD | Delete fields, Add optional fields  | Last version | Producers
+ FORWARD_TRANSITIVE | Delete fields, Add optional fields  | All Previous version | Producers
+ FULL | Delete fields, Add optional fields  | Last version | Any Order
+ FULL_TRANSITIVE | Delete fields, Add optional fields  | All Previous version | Any Order
+ NONE | All changes accepted | Compatibility checking disabled | Depends
+
+### Advice for Avro Schemas
+
+- Make your primary key required
+- Give default values to all fields that could be removed in the future
+- Be very careful when using Enums as they can't evolve over time
+- Don't rename fields. You can add aliases instead (other names)
+- When evolving a schema,ALWAYS give default values
+- When evolving a schema, NEVER delete a required field

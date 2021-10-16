@@ -7,9 +7,9 @@ The main purpose of Kafka is to decouple source and target systems so that we si
 - Messaging
 - Activity Tracking
 - Metrics & Log Gathering
-- Stream Processing (Stram API or Spark)
+- Stream Processing (Stream API or Spark)
 - Decouple Systems
-- Integration with Spark, Flink, Storm, Hadoop and other Big Data technologoes.
+- Integration with Spark, Flink, Storm, Hadoop and other Big Data technologies.
 
 ## Essentials
 
@@ -34,11 +34,11 @@ The main purpose of Kafka is to decouple source and target systems so that we si
 - At any time, only ONE broker can be the leader for a given partition, only that leader can receive and serve data for a partition.
 - Therefore, each partition has one leader and multiple ISR (In-Sync replica)
 
-![Topics and Partitions](imags/../images/kafka-topics-partitions.png)
+![Topics and Partitions](./images/kafka-topics-partitions.png)
 
 ### Producers
 
-![Producers](imags/../images/kafka-producers.png)
+![Producers](./images/kafka-producers.png)
 
 Producers can choose to receive acknowledgement of data writes
 
@@ -55,10 +55,10 @@ Producers can choose to send a **key** with the message
 ### Consumers and Consumer Groups
 
 - Consumers read data in consumer groups
-- Each consumer within a group reads data from an execlusive parition
+- Each consumer within a group reads data from an exclusive partition
 - if you have more consumers than partitions, some will be inactive
 
-![Consumer Groups](imags/../images/kafka-consumer-groups.png)
+![Consumer Groups](./images/kafka-consumer-groups.png)
 
 #### Consumer Offsets
 
@@ -73,7 +73,7 @@ Consumers choose when to commit offsets, so there are 3 delivery semantics:
 
 1. At Most Once: offsets are committed as soon as the message is received, if processing goes wrong, the message will be lost.
 2. At least Once: offsets are committed after the message is processed, if processing goes wrong, the message will be read again. Make sure your processing is idempotent.
-3. Exactly Once: Can be achived for Kafka to Kafka workflows using Kafka Streams API
+3. Exactly Once: Can be achieved for Kafka to Kafka workflows using Kafka Streams API
 
 ## Kafka Broker Discovery
 
@@ -90,4 +90,4 @@ Each broker knows about all brokers, topics and partitions (metadata), you need 
 - Messages are appended to a topic-partition in the order they are sent
 - Consumers read messages in the order stored in a topic partition
 - with a replication factor of N, produces and consumers can tolerate up to N-1 brokers being down.
-- **As long as the number of paritions remains constant for a topic (no new partitions), the same key will always go to the same partition**.
+- **As long as the number of partitions remains constant for a topic (no new partitions), the same key will always go to the same partition**.
