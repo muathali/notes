@@ -4,5 +4,9 @@
         "acks",
         "Flink",
         "Protobuf"
+        "Omni",
+        "Protobuf",
+        "runtimes",
+        "struct"
     ]
 }
