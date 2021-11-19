@@ -91,3 +91,26 @@ Each broker knows about all brokers, topics and partitions (metadata), you need 
 - Consumers read messages in the order stored in a topic partition
 - with a replication factor of N, produces and consumers can tolerate up to N-1 brokers being down.
 - **As long as the number of partitions remains constant for a topic (no new partitions), the same key will always go to the same partition**.
+
+## Commands
+
+confluent local services status
+
+Start Confluent Platform using the confluent local services start command. This command will start all of the Confluent Platform components, including Kafka, ZooKeeper, Schema Registry, HTTP REST Proxy for Kafka, Kafka Connect, and ksqlDB:;
+
+Start Confluent Platform
+confluent local services start
+
+kafka-topics --bootstrap-server localhost:9092 --list
+
+kafka-topics --bootstrap-server localhost:9092 --topic first_topic --create --partitions 3 replication-factor 1
+
+kafka-topics --bootstrap-server localhost:9092 --topic first_topic --describe
+kafka-topics --bootstrap-server localhost:9092 --topic first_topic --delete
+
+
+kafka-console-producer --broker-list localhost:9092 --topic first_topic
+kafka-console-producer --broker-list localhost:9092 --topic first_topic --producer-property acks=all
+
+kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic
+kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic  --from-beginning

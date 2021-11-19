@@ -8,6 +8,7 @@ nav:
     - 'Streaming': architecture/streams.md
     - 'Kafka': architecture/kafka.md
     - 'Avro': architecture/avro.md
+    - 'State Stores': architecture/state-stores.md
     - 'Initial Load': architecture/init-load.md
   - 'Programming':
     - 'C#': programming/csharp.md
