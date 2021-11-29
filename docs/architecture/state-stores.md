@@ -30,7 +30,7 @@ Kafka Streams makes sure that the local state stores are robust to failures, too
 
 To query the full state of your application, you must connect the various fragments of the state, including query local state stores and discover all running instances of your application in the network and their state stores.
 
-![state stores](./images/streams-interactive-queries-api.png)
+![state stores](./images/state-stores-interactive-queries.png)
 
 ### Optimizing State Stores
 
@@ -52,7 +52,7 @@ A table in Kafka is more like an RDBMS materialized view than an RDBMS table, be
 
 A stream can be converted into a table by aggregating the stream with operations like `count` or `sum`, we can also turn a table into a stream by capturing and re-playing its change log.
 
-![duality](./images/duality.png)
+![duality](./images/state-stores-duality.png)
 
 ### Tables are partitioned
 
