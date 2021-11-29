@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/architecture/kafka/">
+        <link rel="canonical" href="https://example.com/tools/avro/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>Kafka - Muath's Notes</title>
+        <title>Avro - Muath's Notes</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kafka" class="md-skip">
+        <a href="#avro" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kafka
+              Avro
             
           </span>
         </div>
@@ -186,15 +186,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../architecture/" class="md-tabs__link">
         Architecture
       </a>
     </li>
@@ -210,7 +208,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../programming/csharp/" class="md-tabs__link">
+      <a href="../../programming/learning-angular/" class="md-tabs__link">
         Programming
       </a>
     </li>
@@ -226,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../aws/aws-glue/" class="md-tabs__link">
+      <a href="../../aws/private-link/" class="md-tabs__link">
         AWS
       </a>
     </li>
@@ -252,13 +250,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../tools/docker/" class="md-tabs__link">
+      <a href="../commands/" class="md-tabs__link md-tabs__link--active">
         Tools
       </a>
     </li>
@@ -333,14 +333,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         Architecture
@@ -358,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../architecture/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -370,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../streams/" class="md-nav__link">
+      <a href="../../architecture/streams/" class="md-nav__link">
         Streaming
       </a>
     </li>
@@ -380,139 +378,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Kafka
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Kafka
+    <li class="md-nav__item">
+      <a href="../../architecture/state-stores/" class="md-nav__link">
+        State Stores
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#kafka-use-cases" class="md-nav__link">
-    Kafka Use Cases
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#essentials" class="md-nav__link">
-    Essentials
-  </a>
-  
-    <nav class="md-nav" aria-label="Essentials">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#brokers" class="md-nav__link">
-    Brokers
-  </a>
-  
-    <nav class="md-nav" aria-label="Brokers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#brokers-and-topics" class="md-nav__link">
-    Brokers and Topics
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#producers" class="md-nav__link">
-    Producers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consumers-and-consumer-groups" class="md-nav__link">
-    Consumers and Consumer Groups
-  </a>
-  
-    <nav class="md-nav" aria-label="Consumers and Consumer Groups">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consumer-offsets" class="md-nav__link">
-    Consumer Offsets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-semantics-for-consumers" class="md-nav__link">
-    Delivery Semantics for consumers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kafka-broker-discovery" class="md-nav__link">
-    Kafka Broker Discovery
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zookeeper" class="md-nav__link">
-    Zookeeper
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kafka-guarantees" class="md-nav__link">
-    Kafka Guarantees
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -522,8 +392,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../avro/" class="md-nav__link">
-        Avro
+      <a href="../../architecture/init-load/" class="md-nav__link">
+        Initial Load
       </a>
     </li>
   
@@ -558,18 +428,6 @@
           Programming
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../programming/csharp/" class="md-nav__link">
-        C#
-      </a>
-    </li>
-  
-
           
             
   
@@ -624,6 +482,18 @@
           AWS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/private-link/" class="md-nav__link">
+        Private Link
+      </a>
+    </li>
+  
+
           
             
   
@@ -715,12 +585,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       <label class="md-nav__link" for="__nav_6">
         Tools
@@ -738,8 +610,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/docker/" class="md-nav__link">
-        Docker
+      <a href="../commands/" class="md-nav__link">
+        Commands
       </a>
     </li>
   
@@ -750,7 +622,145 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tools/mac-os/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Avro
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Avro
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-avro" class="md-nav__link">
+    Why Avro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro-file-format" class="md-nav__link">
+    Avro File Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro-schema" class="md-nav__link">
+    Avro Schema
+  </a>
+  
+    <nav class="md-nav" aria-label="Avro Schema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#primitive-data-types" class="md-nav__link">
+    Primitive Data Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-data-types-of-avro" class="md-nav__link">
+    Complex Data Types of Avro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro-schema-registry" class="md-nav__link">
+    Avro Schema Registry
+  </a>
+  
+    <nav class="md-nav" aria-label="Avro Schema Registry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema-evolution" class="md-nav__link">
+    Schema Evolution
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatibility-types" class="md-nav__link">
+    Compatibility Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advice-for-avro-schemas" class="md-nav__link">
+    Advice for Avro Schemas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mac-os/" class="md-nav__link">
         Mac OS
       </a>
     </li>
@@ -843,31 +853,65 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#kafka-use-cases" class="md-nav__link">
-    Kafka Use Cases
+  <a href="#why-avro" class="md-nav__link">
+    Why Avro
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#essentials" class="md-nav__link">
-    Essentials
+  <a href="#avro-file-format" class="md-nav__link">
+    Avro File Format
   </a>
   
-    <nav class="md-nav" aria-label="Essentials">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro-schema" class="md-nav__link">
+    Avro Schema
+  </a>
+  
+    <nav class="md-nav" aria-label="Avro Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#brokers" class="md-nav__link">
-    Brokers
+  <a href="#primitive-data-types" class="md-nav__link">
+    Primitive Data Types
   </a>
   
-    <nav class="md-nav" aria-label="Brokers">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex-data-types-of-avro" class="md-nav__link">
+    Complex Data Types of Avro
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#avro-schema-registry" class="md-nav__link">
+    Avro Schema Registry
+  </a>
+  
+    <nav class="md-nav" aria-label="Avro Schema Registry">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#brokers-and-topics" class="md-nav__link">
-    Brokers and Topics
+  <a href="#schema-evolution" class="md-nav__link">
+    Schema Evolution
+  </a>
+  
+    <nav class="md-nav" aria-label="Schema Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compatibility-types" class="md-nav__link">
+    Compatibility Types
   </a>
   
 </li>
@@ -878,62 +922,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#producers" class="md-nav__link">
-    Producers
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#consumers-and-consumer-groups" class="md-nav__link">
-    Consumers and Consumer Groups
-  </a>
-  
-    <nav class="md-nav" aria-label="Consumers and Consumer Groups">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#consumer-offsets" class="md-nav__link">
-    Consumer Offsets
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-semantics-for-consumers" class="md-nav__link">
-    Delivery Semantics for consumers
+  <a href="#advice-for-avro-schemas" class="md-nav__link">
+    Advice for Avro Schemas
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kafka-broker-discovery" class="md-nav__link">
-    Kafka Broker Discovery
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zookeeper" class="md-nav__link">
-    Zookeeper
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kafka-guarantees" class="md-nav__link">
-    Kafka Guarantees
-  </a>
   
 </li>
       
@@ -950,90 +946,186 @@
               
                 
                 
-                <h1 id="kafka">Kafka</h1>
-<p>The main purpose of Kafka is to decouple source and target systems so that we simplify integrations</p>
-<h2 id="kafka-use-cases">Kafka Use Cases</h2>
-<ul>
-<li>Messaging</li>
-<li>Activity Tracking</li>
-<li>Metrics &amp; Log Gathering</li>
-<li>Stream Processing (Stram API or Spark)</li>
-<li>Decouple Systems</li>
-<li>Integration with Spark, Flink, Storm, Hadoop and other Big Data technologoes.</li>
-</ul>
-<h2 id="essentials">Essentials</h2>
-<ul>
-<li>a Kafka Topic is split into <strong>Partitions</strong> (0, 1, 2 ...etc)</li>
-<li>Each Partition is Ordered</li>
-<li>Each message in a Partition gets an incremental id, called offset.</li>
-<li>Offset has a meaning within a Partition</li>
-<li>Order is guaranteed only within a Partition</li>
-<li>Data is kept for a limited time (default 1 week)</li>
-<li><strong>Once a data is written to a partition, it cannot be changed. (Immutability)</strong></li>
-<li>Data is assigned randomly to a partition unless a key is provided.</li>
-</ul>
-<h3 id="brokers">Brokers</h3>
-<ul>
-<li>A Kafka cluster is composed of multiple brokers (servers)</li>
-<li>Each broker is identified with its Id (integer)</li>
-<li>Each broker contains certain topic partitions</li>
-<li>After connecting to any broker (called bootstrap broker), you will be connected to the entire cluster</li>
-</ul>
-<h4 id="brokers-and-topics">Brokers and Topics</h4>
-<ul>
-<li>At any time, only ONE broker can be the leader for a given partition, only that leader can receive and serve data for a partition.</li>
-<li>Therefore, each partition has one leader and multiple ISR (In-Sync replica)</li>
-</ul>
-<p><img alt="Topics and Partitions" src="../images/kafka-topics-partitions.png" /></p>
-<h3 id="producers">Producers</h3>
-<p><img alt="Producers" src="../images/kafka-producers.png" /></p>
-<p>Producers can choose to receive acknowledgement of data writes</p>
+                <h1 id="avro">Avro</h1>
+<p>Avro is a row-based storage format which is widely used as a serialization platform. Avro stores its schema in JSON format making it easy to read and interpret by any program. The data itself is kept in a binary format for a more efficient and compact storage.</p>
+<p>Compared to column-based file formats like ORC and Parquet which are more suited for reader heavy use cases, Avro is better suited for heavy writer applications.</p>
+<p>Kafka works with binary data, it accepts bytes as input from Producers and publishes them to be consumed, it does not really understand the data it processes or provide any validation, nonetheless, producers and consumers need to agree on a specific data format for any meaningful exchange of information.</p>
+<p>Some of the popular data formats are CSV, JSON, Avro, Protocol Buffers among others, CVS files tends to be difficult to query, flat (does not support hierarchy) and consumes more disk space. JSON also tends to inefficient as it repeats every field name with every single record. Avro and Protobuf on the other hand use binary format for speed and efficiency, this guide will focus on how to use Avro streaming data with Kafka.</p>
+<h2 id="why-avro">Why Avro</h2>
+<p>Avro is the preferred format when working with Kafka for a number of reasons:</p>
 <ol>
-<li>acks=0, Producer won't wait for acknowledgement</li>
-<li>acks=1 (default), Producer will wait for the leader to acknowledge</li>
-<li>acks=all, Leader and replica acknowledge</li>
+<li>Avro is very compact compared to text based formats like CSV and JSON</li>
+<li>Fast Serialization</li>
+<li>Good support by many programming languages including Java</li>
+<li>Data is fully typed</li>
+<li>It has a rich, extensible schema language defined in JSON</li>
+<li>It has a good notion of compatibility for evolving data over time</li>
+<li>Documentation is embedded in the schema</li>
 </ol>
-<p>Producers can choose to send a <strong>key</strong> with the message</p>
+<h2 id="avro-file-format">Avro File Format</h2>
+<p>Avro uses JSON to define data types and structure and serializes data in a compact binary format, the figure below shows the internal data structure of an Avro file.</p>
+<p><img alt="Avro File Format" src="../images/avro-file-format.png" />
+<a href="https://www.oreilly.com/library/view/operationalizing-the-data/9781492049517/ch04.html#fig_3_the_avro_file_format">Avro File Format - <em>Diagram from O'reilly</em></a></p>
+<h2 id="avro-schema">Avro Schema</h2>
+<p>The Avro schema is created in JavaScript Object Notation (JSON) document format and describes the following details</p>
 <ul>
-<li>if key is not sent, data is sent round robin to the brokers</li>
-<li>if a key is sent, then all messages for that key will always go to the same partition (we get this guarantee thanks to key hashing which depends on the number of partition)</li>
-<li>a key is sent when we need message ordering for a specific field</li>
+<li>Type of file (record by default)</li>
+<li>Name of the record</li>
+<li>Fields in the record with their corresponding data types</li>
 </ul>
-<h3 id="consumers-and-consumer-groups">Consumers and Consumer Groups</h3>
+<p>The following example shows a schema, which defines a document, under the name space <code>duke-energy.com</code>, with name <code>Employee</code>, having fields <code>first_name</code>, <code>last_name</code>, <code>age</code>, <code>exempt</code> and <code>phone_number</code>.</p>
+<pre><code class="language-JSON">{
+  &quot;type&quot;: &quot;record&quot;,
+  &quot;namespace&quot;: &quot;duke-energy.com&quot;,
+  &quot;name&quot;: &quot;Employee&quot;,
+  &quot;fields&quot;: [
+    {
+      &quot;name&quot;: &quot;first_name&quot;,
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;doc&quot;: &quot;First Name of Employee&quot;
+    },
+    {
+      &quot;name&quot;: &quot;last_name&quot;,
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;doc&quot;: &quot;Last Name of Employee&quot;
+    },
+    {
+      &quot;name&quot;: &quot;age&quot;,
+      &quot;type&quot;: &quot;int&quot;,
+      &quot;doc&quot;: &quot;Age at the time of registration&quot;
+    },
+    {
+      &quot;name&quot;: &quot;exempt&quot;,
+      &quot;type&quot;: &quot;boolean&quot;,
+      &quot;default&quot;: true,
+      &quot;doc&quot;: &quot;Exempt employees are not entitled to overtime pay&quot;
+    },
+    {
+      &quot;name&quot;: &quot;phone_number&quot;,
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;default&quot;: &quot;000-000-0000&quot;,
+      &quot;doc&quot;: &quot;Employees Phone Number&quot;
+    }
+  ]
+}
+
+</code></pre>
+<h3 id="primitive-data-types">Primitive Data Types</h3>
+<p>Avro schema have primitive data types as well as complex data types. The following table describes the primitive data types supported by Avro</p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>null</td>
+<td>Null is a type having no value.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32-bit signed integer.</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64-bit signed integer.</td>
+</tr>
+<tr>
+<td>float</td>
+<td>single precision (32-bit) IEEE 754 floating-point number.</td>
+</tr>
+<tr>
+<td>double</td>
+<td>double precision (64-bit) IEEE 754 floating-point number.</td>
+</tr>
+<tr>
+<td>bytes</td>
+<td>sequence of 8-bit unsigned bytes.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>Unicode character sequence.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="complex-data-types-of-avro">Complex Data Types of Avro</h3>
+<p>Avro supports six complex types: <code>records</code>, <code>enums</code>, <code>arrays</code>, <code>maps</code>, <code>unions</code> and <code>fixed</code>. For more information see Avro specification <a href="https://avro.apache.org/docs/current/spec.html">website</a></p>
+<h2 id="avro-schema-registry">Avro Schema Registry</h2>
+<p>Schemas are important to allow multiple projects to collaborate on the same data, a schema registry provides a central location that applications can use to access and evolve schemas, some of the benefits of a schema registry are:</p>
 <ul>
-<li>Consumers read data in consumer groups</li>
-<li>Each consumer within a group reads data from an execlusive parition</li>
-<li>if you have more consumers than partitions, some will be inactive</li>
+<li><strong>Safe schema evolution</strong>: schemas can change while maintaining forward and backward compatibility with previous versions, thus enabling producers and consumers to evolve independently.</li>
+<li><strong>Efficiency</strong>: data storage and processing is more efficient because you don’t need to store the field names, and numbers can be stored in their more efficient binary representation rather than parsed from text.</li>
+<li><strong>Data Discovery</strong>: It is easy to understand the content of a Kafka topic by looking at it's schema definition.</li>
 </ul>
-<p><img alt="Consumer Groups" src="../images/kafka-consumer-groups.png" /></p>
-<h4 id="consumer-offsets">Consumer Offsets</h4>
+<p><img alt="schema-registry" src="../images/avro-schema-registry.svg" /></p>
+<h3 id="schema-evolution">Schema Evolution</h3>
+<p>Applications may need to change the schema over time to support new features or accommodate changing business requirements, when this happens, it is important for downstream consumers to be able to handle data encoded with both the old and the new schema seamlessly.</p>
+<h4 id="compatibility-types">Compatibility Types</h4>
+<p>The following table presents a summary of the types of schema changes allowed for the different compatibility types, for a given subject. The Confluent Schema Registry default compatibility type is <code>BACKWARD</code></p>
+<table>
+<thead>
+<tr>
+<th>Compatibility Type</th>
+<th>Changes allowed</th>
+<th>Check against which schemas</th>
+<th>Upgrade first</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BACKWARD</td>
+<td>Delete fields, Add optional fields</td>
+<td>Last version</td>
+<td>Consumers</td>
+</tr>
+<tr>
+<td>BACKWARD_TRANSITIVE</td>
+<td>Delete fields, Add optional fields</td>
+<td>All Previous version</td>
+<td>Consumers</td>
+</tr>
+<tr>
+<td>FORWARD</td>
+<td>Delete fields, Add optional fields</td>
+<td>Last version</td>
+<td>Producers</td>
+</tr>
+<tr>
+<td>FORWARD_TRANSITIVE</td>
+<td>Delete fields, Add optional fields</td>
+<td>All Previous version</td>
+<td>Producers</td>
+</tr>
+<tr>
+<td>FULL</td>
+<td>Delete fields, Add optional fields</td>
+<td>Last version</td>
+<td>Any Order</td>
+</tr>
+<tr>
+<td>FULL_TRANSITIVE</td>
+<td>Delete fields, Add optional fields</td>
+<td>All Previous version</td>
+<td>Any Order</td>
+</tr>
+<tr>
+<td>NONE</td>
+<td>All changes accepted</td>
+<td>Compatibility checking disabled</td>
+<td>Depends</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advice-for-avro-schemas">Advice for Avro Schemas</h3>
 <ul>
-<li>Kafka stores the offsets at which a consumer group has been reading</li>
-<li>The offsets are committed live in a kafka topic name __consumer_offsets</li>
-<li>When a consumer has processed data received from kafka, it should be committing the offsets</li>
-<li>if a consumer dies, it will be able to read back from where it left off</li>
-</ul>
-<h4 id="delivery-semantics-for-consumers">Delivery Semantics for consumers</h4>
-<p>Consumers choose when to commit offsets, so there are 3 delivery semantics:</p>
-<ol>
-<li>At Most Once: offsets are committed as soon as the message is received, if processing goes wrong, the message will be lost.</li>
-<li>At least Once: offsets are committed after the message is processed, if processing goes wrong, the message will be read again. Make sure your processing is idempotent.</li>
-<li>Exactly Once: Can be achived for Kafka to Kafka workflows using Kafka Streams API</li>
-</ol>
-<h2 id="kafka-broker-discovery">Kafka Broker Discovery</h2>
-<p>Each broker knows about all brokers, topics and partitions (metadata), you need to connect to only one broker and the client is smart enough to work with the entire cluster</p>
-<h2 id="zookeeper">Zookeeper</h2>
-<ul>
-<li>Manages brokers and help performs leader election</li>
-<li>Zookeeper by design operates with an odd number of servers (3, 5, 7)</li>
-<li>has a leader that handles writes, the rest of the servers are followers (handle reads)</li>
-</ul>
-<h2 id="kafka-guarantees">Kafka Guarantees</h2>
-<ul>
-<li>Messages are appended to a topic-partition in the order they are sent</li>
-<li>Consumers read messages in the order stored in a topic partition</li>
-<li>with a replication factor of N, produces and consumers can tolerate up to N-1 brokers being down.</li>
-<li><strong>As long as the number of paritions remains constant for a topic (no new partitions), the same key will always go to the same partition</strong>.</li>
+<li>Make your primary key required</li>
+<li>Give default values to all fields that could be removed in the future</li>
+<li>Be very careful when using Enums as they can't evolve over time</li>
+<li>Don't rename fields. You can add aliases instead (other names)</li>
+<li>When evolving a schema,ALWAYS give default values</li>
+<li>When evolving a schema, NEVER delete a required field</li>
 </ul>
                 
               
@@ -1054,7 +1146,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../streams/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Streaming" rel="prev">
+        <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1063,20 +1155,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Streaming
+              Docker
             </div>
           </div>
         </a>
       
       
         
-        <a href="../avro/" class="md-footer__link md-footer__link--next" aria-label="Next: Avro" rel="next">
+        <a href="../mac-os/" class="md-footer__link md-footer__link--next" aria-label="Next: Mac OS" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Avro
+              Mac OS
             </div>
           </div>
           <div class="md-footer__button md-icon">

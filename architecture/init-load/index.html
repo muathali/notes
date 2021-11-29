@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/architecture/avro/">
+        <link rel="canonical" href="https://example.com/architecture/init-load/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>Avro - Muath's Notes</title>
+        <title>Initial Load - Muath's Notes</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#avro" class="md-skip">
+        <a href="#data-migration-and-initial-load" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Avro
+              Initial Load
             
           </span>
         </div>
@@ -210,7 +210,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../programming/csharp/" class="md-tabs__link">
+      <a href="../../programming/learning-angular/" class="md-tabs__link">
         Programming
       </a>
     </li>
@@ -226,7 +226,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../aws/aws-glue/" class="md-tabs__link">
+      <a href="../../aws/private-link/" class="md-tabs__link">
         AWS
       </a>
     </li>
@@ -258,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../tools/docker/" class="md-tabs__link">
+      <a href="../../tools/commands/" class="md-tabs__link">
         Tools
       </a>
     </li>
@@ -382,8 +382,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../kafka/" class="md-nav__link">
-        Kafka
+      <a href="../state-stores/" class="md-nav__link">
+        State Stores
       </a>
     </li>
   
@@ -404,12 +404,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Avro
+          Initial Load
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Avro
+        Initial Load
       </a>
       
         
@@ -427,43 +427,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-avro" class="md-nav__link">
-    Why Avro
+  <a href="#aws-data-migration-service" class="md-nav__link">
+    AWS Data Migration Service
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avro-file-format" class="md-nav__link">
-    Avro File Format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avro-schema" class="md-nav__link">
-    Avro Schema
-  </a>
-  
-    <nav class="md-nav" aria-label="Avro Schema">
+    <nav class="md-nav" aria-label="AWS Data Migration Service">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#primitive-data-types" class="md-nav__link">
-    Primitive Data Types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complex-data-types-of-avro" class="md-nav__link">
-    Complex Data Types of Avro
+  <a href="#benefits" class="md-nav__link">
+    Benefits
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-glue" class="md-nav__link">
+    AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-replication-topic" class="md-nav__link">
+    Kafka Replication Topic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replay-source-data-set" class="md-nav__link">
+    Replay Source Data Set
+  </a>
   
 </li>
       
@@ -504,18 +504,6 @@
           Programming
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../programming/csharp/" class="md-nav__link">
-        C#
-      </a>
-    </li>
-  
-
           
             
   
@@ -570,6 +558,18 @@
           AWS
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/private-link/" class="md-nav__link">
+        Private Link
+      </a>
+    </li>
+  
+
           
             
   
@@ -684,8 +684,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../tools/commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tools/docker/" class="md-nav__link">
         Docker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/avro/" class="md-nav__link">
+        Avro
       </a>
     </li>
   
@@ -789,43 +813,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-avro" class="md-nav__link">
-    Why Avro
+  <a href="#aws-data-migration-service" class="md-nav__link">
+    AWS Data Migration Service
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avro-file-format" class="md-nav__link">
-    Avro File Format
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#avro-schema" class="md-nav__link">
-    Avro Schema
-  </a>
-  
-    <nav class="md-nav" aria-label="Avro Schema">
+    <nav class="md-nav" aria-label="AWS Data Migration Service">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#primitive-data-types" class="md-nav__link">
-    Primitive Data Types
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complex-data-types-of-avro" class="md-nav__link">
-    Complex Data Types of Avro
+  <a href="#benefits" class="md-nav__link">
+    Benefits
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-glue" class="md-nav__link">
+    AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kafka-replication-topic" class="md-nav__link">
+    Kafka Replication Topic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replay-source-data-set" class="md-nav__link">
+    Replay Source Data Set
+  </a>
   
 </li>
       
@@ -842,111 +866,24 @@
               
                 
                 
-                <h1 id="avro">Avro</h1>
-<p>Avro is a row-based storage format which is widely used as a serialization platform. Avro stores its schema in JSON format making it easy to read and interpret by any program. The data itself is kept in a binary format for a more efficient and compact storage.</p>
-<p>Compared to column-based file formats like ORC and Parquet which are more suited for reader heavy use cases, Avro is better suited for heavy writer applications.</p>
-<p>Kafka works with binary data, it accepts bytes as input from Producers and publishes them to be consumed, it does not really understand the data it processes or provide any validation, nonetheless, producers and consumers need to agree on a specific data format for any meaningful exchange of information.</p>
-<p>Some of the popular data formats are CSV, JSON, Avro, Protocol Buffers among others, CVS files tends to be difficult to query, flat (does not support hierarchy) and consumes more disk space. JSON also tends to inefficient as it repeats every field name with every single record. Avro and Protobuf on the other hand use binary format for speed and efficiency, this guide will focus on how to use Avro streaming data with Kafka.</p>
-<h2 id="why-avro">Why Avro</h2>
-<p>Avro seems to be the preferred format when working with Kafka for a number of reasons:</p>
-<ol>
-<li>Avro is very compact compared to text based formats like CSV and JSON</li>
-<li>Fast Serialization</li>
-<li>Good support by many programming languages including Java</li>
-<li>Data is fully typed</li>
-<li>It has a rich, extensible schema language defined in JSON</li>
-<li>It has a good notion of compatibility for evolving data over time</li>
-<li>Documentation is embedded in the schema</li>
-</ol>
-<h2 id="avro-file-format">Avro File Format</h2>
-<p>Avro uses JSON to define data types and structure and serializes data in a compact binary format, the figure below shows the internal data structure of an Avro file.</p>
-<p><img alt="Avro File Format" src="../images/avro-file-format.png" />
-<a href="https://www.oreilly.com/library/view/operationalizing-the-data/9781492049517/ch04.html#fig_3_the_avro_file_format">Avro File Format - <em>Diagram from O'reilly</em></a></p>
-<h2 id="avro-schema">Avro Schema</h2>
-<p>The Avro schema is created in JavaScript Object Notation (JSON) document format and describes the following details</p>
+                <h1 id="data-migration-and-initial-load">Data Migration and Initial Load</h1>
+<p>In a typical Microservices architecture, business applications consume data streamed into various Kafka topics, however it is often the case that these apps would initially need to replicate a specific master data set, for example, a mailer application would need a complete set of employees to seed its local employee table.</p>
+<p>There are few ways to replicate an initial data set: AWS Data Migration Service, AWS Glue, also Kafka can be used to stream the initial data set to the target data store.</p>
+<h2 id="aws-data-migration-service">AWS Data Migration Service</h2>
+<p>AWS DMS is a managed service design to migrate databases to AWS, the source database remains fully operational during the migration.</p>
+<h3 id="benefits">Benefits</h3>
 <ul>
-<li>Type of file (record by default)</li>
-<li>Name of the record</li>
-<li>Fields in the record with their corresponding data types</li>
+<li>Simple to Use, AWS Database Migration Service is simple to use. There is no need to install any drivers or applications, and it does not require changes to the source database in most cases. You can begin a database migration with just a few clicks in the AWS Management Console. Once the migration has started, DMS manages all the complexities of the migration process including automatically replicating data changes that occur in the source database during the migration process. You can also use this service for continuous data replication with the same simplicity</li>
+<li>Supports widely used databases, AWS Database Migration Service can migrate your data to and from most of the widely used commercial and open source databases. It supports homogeneous migrations such as Oracle to Oracle, as well as heterogeneous migrations between different database platforms, such as Oracle to Amazon Aurora. Migrations can be from on-premises databases to Amazon RDS or Amazon EC2, databases running on EC2 to RDS, or vice versa, as well as from one RDS database to another RDS database. It can also move data between SQL, NoSQL, and text based targets</li>
+<li>Low cost, AWS Database Migration Service is a low cost service. You only pay for the compute resources used during the migration process and any additional log storage. Migrating a terabyte-size database can be done for as little as $3. This applies to both homogeneous and heterogeneous migrations of any supported databases.</li>
+<li>For additional information and to get started using the service, see <a href="https://aws.amazon.com/dms/">AWS Database Migration Service</a> on the web.</li>
 </ul>
-<p>The following example shows a schema, which defines a document, under the name space <code>duke-energy.com</code>, with name <code>Employee</code>, having fields <code>first_name</code>, <code>last_name</code>, <code>age</code>, <code>exempt</code> and <code>phone_number</code>.</p>
-<pre><code class="language-JSON">{
-  &quot;type&quot;: &quot;record&quot;,
-  &quot;namespace&quot;: &quot;duke-energy.com&quot;,
-  &quot;name&quot;: &quot;Employee&quot;,
-  &quot;fields&quot;: [
-    {
-      &quot;name&quot;: &quot;first_name&quot;,
-      &quot;type&quot;: &quot;string&quot;,
-      &quot;doc&quot;: &quot;First Name of Employee&quot;
-    },
-    {
-      &quot;name&quot;: &quot;last_name&quot;,
-      &quot;type&quot;: &quot;string&quot;,
-      &quot;doc&quot;: &quot;Last Name of Employee&quot;
-    },
-    {
-      &quot;name&quot;: &quot;age&quot;,
-      &quot;type&quot;: &quot;int&quot;,
-      &quot;doc&quot;: &quot;Age at the time of registration&quot;
-    },
-    {
-      &quot;name&quot;: &quot;exempt&quot;,
-      &quot;type&quot;: &quot;boolean&quot;,
-      &quot;default&quot;: true,
-      &quot;doc&quot;: &quot;Exempt employees are not entitled to overtime pay&quot;
-    },
-    {
-      &quot;name&quot;: &quot;phone_number&quot;,
-      &quot;type&quot;: &quot;string&quot;,
-      &quot;default&quot;: &quot;000-000-0000&quot;,
-      &quot;doc&quot;: &quot;Employees Phone Number&quot;
-    }
-  ]
-}
-
-</code></pre>
-<h3 id="primitive-data-types">Primitive Data Types</h3>
-<p>Avro schema have primitive data types as well as complex data types. The following table describes the primitive data types supported by Avro</p>
-<table>
-<thead>
-<tr>
-<th>Data type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>null</td>
-<td>Null is a type having no value.</td>
-</tr>
-<tr>
-<td>int</td>
-<td>32-bit signed integer.</td>
-</tr>
-<tr>
-<td>long</td>
-<td>64-bit signed integer.</td>
-</tr>
-<tr>
-<td>float</td>
-<td>single precision (32-bit) IEEE 754 floating-point number.</td>
-</tr>
-<tr>
-<td>double</td>
-<td>double precision (64-bit) IEEE 754 floating-point number.</td>
-</tr>
-<tr>
-<td>bytes</td>
-<td>sequence of 8-bit unsigned bytes.</td>
-</tr>
-<tr>
-<td>string</td>
-<td>Unicode character sequence.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="complex-data-types-of-avro">Complex Data Types of Avro</h3>
+<h2 id="aws-glue">AWS Glue</h2>
+<p>AWS Glue is a serverless data integration and ETL service, it provides capabilities needed for data integration so that you can start analyzing your data quickly. Glue uses ETL jobs that are Scala or Python based and works on top of the Apache Spark environment to provide a scale-out execution environment for your data transformation jobs, for simple data load tasks that does not require extensive transformation AWS DMS might be a simpler, lower cost and better choice.</p>
+<h2 id="kafka-replication-topic">Kafka Replication Topic</h2>
+<p>A separate Kafka replication topic can be created for the purpose of seeding the target data set, this approach might clutter the Kafka cluster as it really not meant to stream data, care must be taken to remove this topic when it is no longer needed.</p>
+<h2 id="replay-source-data-set">Replay Source Data Set</h2>
+<p>To replicate the initial data set, one can re-play all records from the source database to the main kafka topic, however this approach is not recommended as it requires that other consumers are able to handle the extra traffic gracefully, in addition it creates an illusion of new events that did not really happen but was manufactured in order to move the data.</p>
                 
               
               
@@ -966,7 +903,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../kafka/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kafka" rel="prev">
+        <a href="../state-stores/" class="md-footer__link md-footer__link--prev" aria-label="Previous: State Stores" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -975,20 +912,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Kafka
+              State Stores
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../programming/csharp/" class="md-footer__link md-footer__link--next" aria-label="Next: C#" rel="next">
+        <a href="../../programming/learning-angular/" class="md-footer__link md-footer__link--next" aria-label="Next: Learning Angular" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              C#
+              Learning Angular
             </div>
           </div>
           <div class="md-footer__button md-icon">
