@@ -24,8 +24,9 @@ nav:
   - 'Tools':
     - 'Docker': tools/docker.md
     - 'Mac OS': tools/mac-os.md
-  - 'Light':
+  - 'Photography':
     - 'Final Cut Pro': light/fcp.md
+    - 'FCP Shortcuts': light/fcp-shortcuts.md
     - 'Stunning Digital Photography': light/sdp.md
 
 theme:

@@ -1,7 +1,5 @@
 # Final Cut Pro
 
-> Titles are for showing text, Generators are for creating backgrounds and filler content
-
 ## Resolution
 
 Video is essentially a series of still images, and each frame has a horizontal and a vertical dimension in pixels. Common resolutions use abbreviations, including the following:
@@ -16,28 +14,13 @@ Video is essentially a series of still images, and each frame has a horizontal a
 
 If it is at all possible, shoot in the same frame rate that you want to deliver. For a "cinematic" look, you'll want to shoot at 24 or 25 frames per second (fps), although 29.97 fps is widely used too.
 
-Why these specific numbers?
-A video image is updated a certain number of times per second, and that number is different for TV signals in different parts of the world for historical reasons related to electricity.
-
-Here are some guidelines:
-
-- In 110–120 V countries, such as the US, Canada, and elsewhere, 29.97 fps is used.
-- In 240–250 V countries, such as most of Europe (including the UK), Australia, and New Zealand, 25 fps is used.
-- In the international world of feature films and high-quality TV, 24 fps is the norm, although 23.98 fps is often used as it makes for easier conversion to US TV standards.
-
-Does it matter which one you use if you're delivering online? Not much. But if you're delivering to TV or cinema, then it definitely matters, and you'll need to examine the delivery requirements carefully.
-
-You might also have to deal with interlaced delivery (1080i) rather than progressive (1080p), but interlaced video today is only requested for TV broadcasts. Shoot and deliver in progressive formats, unless the client explicitly asks for interlaced delivery
-
 It's also possible to record at moderately high frame rates, such as 50 or 60 fps, or even higher. While these frame rates do deliver smoother motion, most viewers find that videos shot in these modes look a little fake, unnatural, or cheap when played back at that speed, and so these higher frame rates are rarely seen outside of sports and gaming videos. Rather, these higher frame rates are more commonly used to give the option of slow motion, captured at a high speed, but played back at a slower speed
 
-If you record at 60 fps, you can then slow it down on the timeline, showing every frame you shot for a speed of 42% on a 25 fps timeline or 50% on a 30 fps timeline. This is referred to as Automatic Speed in FCP, and it's very handy. But this is just an option — footage shot at a moderately high frame rate doesn't have to be slowed down. It's entirely possible to use this footage in real time instead by skipping frames on playback. Many shooters use these moderately high frame rates for B-roll (explained soon) to give more options during editing
-
-Be aware that as you increase the frame rate, especially to higher numbers, the camera has to work harder, and you may have to compromise resolution as a result. Check your camera because there's often a distinction between "regular" frame rates, up to 60 fps, and "high-speed" frame rates, which can go much higher at a lower resolution, lower quality, and/or without audio. Whatever frame rate you shoot at, you should be consistent. While it's quite easy to incorporate slow-motion footage shot at any speed, your regular footage should all use the same frame rate — probably 24, 25, or 30 fps. Mixing similar frame rates can cause visible stutters (due to skipped or duplicated frames) and it's something to avoid if at all possible
+If you record at 60 fps, you can then slow it down on the timeline, showing every frame you shot for a speed of 42% on a 25 fps timeline or 50% on a 30 fps timeline. This is referred to as Automatic Speed in FCP, and it's very handy. But this is just an option — footage shot at a moderately high frame rate doesn't have to be slowed down. It's entirely possible to use this footage in real time instead by skipping frames on playback. Many shooters use these moderately high frame rates for B-roll to give more options during editing
 
 ## Shutter Speed
 
-A separate but related issue is shutter speed, how many times per second an image is captured, which is expressed as a fraction of a second, such as 1/50 or 1/200. As a rule of thumb, to give your footage a natural motion blur, you should try to double your frame rate to determine the "ideal" shutter speed denominator:
+As a rule of thumb, to give your footage a natural motion blur, you should try to double your frame rate to determine the "ideal" shutter speed denominator:
 
 - 1/48 or 1/50 for 24 fps
 - 1/50 for 25 fps
@@ -48,19 +31,23 @@ It's important to note that this rule (known as the 180° shutter rule) does not
 
 ## Codecs
 
-Most compressed videos today use a compression method (codec) called H.264, although H.265 (also known as HEVC) is becoming more popular. Support for HEVC (at the time of writing) is less mature; only recent Macs with a T2 chip can decode HEVC easily. Higher-end cameras might offer other options, such as ProRes, ProRes RAW, and Blackmagic RAW. While all of these formats do increase the quality, they take up significantly more space.
-For example, a Panasonic GH5 records at a data rate of 100 Megabits per Second (Mbps) at 4K at 24/25/30 fps, or 150 Mbps for 4K at 50/60 fps, alongside many other options
+Most compressed videos today use a compression method (codec) called H.264, although H.265 (also known as HEVC) is becoming more popular.
 
-The data rate for ProRes at the same resolutions and frame rates ranges from 470-589 Mbps, much, much higher than typical H.264 and HEVC codecs. These increased data rates require a much faster and larger recording device, typically an SSD rather than an SD card. You'll want to find a balance between quality and file size that suits your job's needs; read reviews, download files, and do the math to figure out how much space you'll need.
-Lastly, it's very important to know that not all cameras compress video in the same way. H.264 from one camera can be easy to deal with, while footage from another camera stutters on playback. If it is at all possible, download some original footage from a camera you're planning on using to make sure it works well in your workflow. Expect new codecs and workflow changes in the future — standards do shift over time.
+Higher-end cameras might offer other options, such as ProRes, ProRes RAW, and Blackmagic RAW. While all of these formats do increase the quality, they take up significantly more space.
+
+The data rate for ProRes at the same resolutions and frame rates ranges from 470-589 Mbps, much, much higher than typical H.264 and HEVC codecs. These increased data rates require a much faster and larger recording device, typically an SSD rather than an SD card.
+
+You'll want to find a balance between quality and file size that suits your job's needs; read reviews, download files, and do the math to figure out how much space you'll need.
 
 ## Containers
 
-Video data is encoded using a particular codec and is then stored in a container, usually a file with a .mp4 or .mov file extension. A container is not a codec, however; H.264 can be found inside many different types of containers, and a .mp4 file might contain video data in one of many different codecs. Still, you'll probably be fine; just look at the extension at the end of the filename to see which kind(s) your camera makes.
-However, there are cameras out there that don't produce single contained video files at all. The AVCHD format, for example, spreads important data out on separate files across different subfolders, meaning you can't simply copy a file from an SD card and have a single video clip. Instead, the video data needs to be rewrapped inside a container format that FCP can use by importing directly from the SD card. Other cameras do contain their clips in single files (yay!), but they restart their file numbering on every card (boo!), leaving you to manage multiple files with identical names.
-Where possible, I prefer to avoid AVCHD and other fussy container formats. A standalone video clip with a unique name using a standard codec is the gold standard, and plenty of cameras make files like this. If you're choosing the camera, don't bend over backward to support one that makes your life difficult.
+Video data is encoded using a particular codec and is then stored in a container, usually a file with a .mp4 or .mov file extension. A container is not a codec, however; H.264 can be found inside many different types of containers, and a .mp4 file might contain video data in one of many different codecs.
 
-## Optimized media (Pro Res 422)
+## Optimized and Proxy Media
+
+### Optimized media (Pro Res 422)
+
+If your Mac is struggling to handle one or more clips, you can transcode them, making an additional optimized copy of some or all of the files in the ProRes 422 codec
 
 Pro Res 422 is an Apple-designed "mezzanine" codec that is relatively large, high-quality, and easy to edit. While most compressed camera codecs are inter-frame, describing their image data in relation to previous frames or even frames coming up soon, ProRes is an intra-frame codec, like a series of still images that don't refer to one another. This is less efficient and takes up more space, but it's much simpler for your Mac to work with
 
@@ -80,9 +67,11 @@ ProRes 422 data rates are far higher than most camera-original data rates, but t
 
 For longer jobs, optimized media might require terabytes of space that you don't have, and you might need to use a different approach: proxies.
 
-## Proxy media
+### Proxy media
 
-While optimized files are a full-quality replacement for original media, proxy files are a medium-quality (and often lower-resolution) option that is only intended for use during the editing process. It'll look softer and possibly less pretty than you'd like, but that's fine while you're editing. Proxy media is quick to work with, and it doesn't take up nearly as much space as optimized media does. Previously, ProRes Proxy was the only way to go, at a data rate like this:
+While optimized files are a full-quality replacement for original media, proxy files are a medium-quality (and often lower-resolution) option that is only intended for use during the editing process. It'll look softer and possibly less pretty than you'd like, but that's fine while you're editing.
+
+Proxy media is quick to work with, and it doesn't take up nearly as much space as optimized media does. Previously, ProRes Proxy was the only way to go, at a data rate like this:
 
 ProRes Proxy — 1080p, 24fps: 36 Mbps or 4.5 MB/s
 
@@ -95,7 +84,7 @@ Note that if proxies have been created and you want to change their resolution o
 
 Most kinds of original media can be optimized, but ProRes, HDV, and DV footage cannot. MP3 audio files are converted into uncompressed formats automatically on import, so you can't optimize them manually either.
 
-## Viewing proxy media
+#### Viewing proxy media
 
 If you create proxy files, you also have to choose to view them. You can choose to view Optimized/Original files exclusively, proxy files exclusively with Proxy Only, or use Proxy Preferred (new in 10.4.9) to show proxy if available, and the original or optimized file if the proxy isn't available or hasn't yet been created. That last option is what you want while you're editing with proxies, and when you're done with the edit and before you export, switch back to the original quality media.
 To the workflow, then — if you can't work with the original media and an optimized version would be too big, this is the best way forward:
@@ -109,11 +98,25 @@ To the workflow, then — if you can't work with the original media and an optim
 
 Proxy workflows can save a lot of space, but if you view proxy media, that's what you'll export. Always remember to switch back to Optimized/Original before sharing — though you'll be warned if you don't.
 
-## Skimming
+### Summary
 
-Probably the first habit that most editors need to break when shifting to FCP is that of clicking. There's simply no need to click on a clip before playing it back, and in fact, it can cause issues if that click turns into an accidental drag and changes the current selection. Instead, *simply hover your cursor over a clip's filmstrip, just before a particular moment, then press the spacebar*
+> 1. Use original media if possible.
+> 2. If the original media is too slow, generate optimized media if you have sufficient space, then edit and export with it.
+> 3. If the original media is too slow and optimized media would be too big, generate proxy media, switch to viewing Proxy Preferred > during editing, and switch back to Optimized/Original before exporting.
 
-## Playback Shortcuts
+## Playback
+
+**Probably the first habit that most editors need to break when shifting to FCP is that of clicking**. There's simply no need to click on a clip before playing it back, and in fact, it can cause issues if that click turns into an accidental drag and changes the current selection. Instead, simply hover cursor over a clip's filmstrip, just before a particular moment, then press the space bar
+
+FCP actually has two ways to indicate a position in time: the Playhead and the Skimmer
+
+- The Playhead is a white vertical line, is positioned with a click, and stays in position when the mouse cursor moves elsewhere.
+- The Skimmer is a red vertical line, moves with the mouse cursor, and is only visible when the cursor hovers over a clip.
+- The Skimmer can be toggled on or off (blue means on) with a central toolbar button, or the S shortcut
+
+> If it's present, the Skimmer takes priority over the Playhead
+
+### Shortcuts
 
 Shortcut | Description
 ---------|----------
@@ -149,20 +152,20 @@ To review a particular part of a clip, you can certainly hover or click just bef
 - Activate Looping with View > Playback > Loop Playback (⌘L)
 - Press ? to Play Around Edit
 
-This is a great way to repeatedly see part of a clip as the Playhead jumps a few seconds back, plays through the selected point, and plays a few seconds forward before starting again. It's useful in an edit on the Timeline too
+This is a great way to repeatedly see part of a clip as the Play head jumps a few seconds back, plays through the selected point, and plays a few seconds forward before starting again. It's useful in an edit on the Timeline too
 
 ### Clips
 
 Shortcut | Description
 ---------|----------
 **I,O** | To select part of a clip
-**F** | To mark as faviorate
-**U** | To remove faviorate
+**F** | To mark as favorite
+**U** | To remove favorite
 **⌥ X** | To remove selection
 **⌫** | Press the delete key (not forward delete) to mark selection as Rejected
 **⌥M** | To create a Marker and edit its name
 
-Pressing M alone is sufficient if you don't want to name a Marker. You could also press M twice to create it and then edit it, if you are careful not to move the mouse between the two keypresses
+Pressing M alone is sufficient if you don't want to name a Marker. You could also press M twice to create it and then edit it, if you are careful not to move the mouse between the two key presses
 
 A Marker can be clicked on to show its name in the Skimmer Info (toggle with ⌃Y if you don't see it) above your cursor, and if Snapping is active, then you'll hit Markers easily while you skim. Snapping is a feature that will be used more during the editing process, but you can press N to toggle it on or off at any time
 
@@ -185,13 +188,13 @@ If you're trying to clean up an edit by trimming a few frames from a sequence of
 
 Shortcut | Description
 ---------|----------
-**[** | Selects the out point of the clip to the left of the Playhead.
-**]** | Selects the in point of the clip to the right of the Playhead.
+**[** | Selects the out point of the clip to the left of the Play head.
+**]** | Selects the in point of the clip to the right of the Play head.
 
 Trim Start and Trim End commands are a great way to make clips shorter, and they can be used while the video is paused, or while it's playing
 
-- Press **⌥ [** to use Trim Start, moving the in point of the current clip to the current Playhead or Skimmer.
-- Press **⌥ ]** to Trim End, moving the out point of the current clip to the current Playhead or Skimmer
+- Press **⌥ [** to use Trim Start, moving the in point of the current clip to the current Play head or Skimmer.
+- Press **⌥ ]** to Trim End, moving the out point of the current clip to the current Play head or Skimmer
 
 ### Extending edits
 
@@ -211,7 +214,7 @@ If you tap a key, you'll switch to that tool. But if you hold a key, you'll only
 - Click on a clip to split it into two clips at that point:
 - The new edit is indicated with a dashed line for now. It's called a through edit because the two frames around the edit are actually sequential. If you change your mind, through edits can be selected (with the Select tool) and deleted, healing the clip as if it was never bladed.
 
-There's another way to blade that gives the same result, but without switching tools. As the video plays back, you can press **⌘B** to break up the current clip at the Playhead, and the strength of this approach is that you can blade a clip while it's playing. That's certainly handy from time to time, but Blade (either way) shouldn't be your first choice. If you want to make a clip shorter, Trim Start and Trim End are more efficient. If you want to delete part of a clip, it's not the best for that either
+There's another way to blade that gives the same result, but without switching tools. As the video plays back, you can press **⌘B** to break up the current clip at the Play head, and the strength of this approach is that you can blade a clip while it's playing. That's certainly handy from time to time, but Blade (either way) shouldn't be your first choice. If you want to make a clip shorter, Trim Start and Trim End are more efficient. If you want to delete part of a clip, it's not the best for that either
 
 ### Selecting part of a clip
 
@@ -245,7 +248,7 @@ you'll place clips above other clips simply when you want to cover something up 
 
 ### Understanding connections
 
-Probably the biggest difference between a traditional editing timeline and the FCP Magnetic Timeline is the way in which clips sit above or below other clips. In a traditional editing application, a clip's timecode is the most important factor: clips sit at a point in time, and any relationship between two clips positioned above or below one another is merely implied. Such clips can move out of sync with each other if you're not careful.
+Probably the biggest difference between a traditional editing timeline and the FCP Magnetic Timeline is the way in which clips sit above or below other clips. In a traditional editing application, a clip's time code is the most important factor: clips sit at a point in time, and any relationship between two clips positioned above or below one another is merely implied. Such clips can move out of sync with each other if you're not careful.
 Here in FCP, clips on the Primary Storyline form the spine around which everything else is built: clips above or below are always connected to a clip on the Primary Storyline, no matter how many clips there are in the stack. When a clip with connections is moved, the connected clips also move, and when a clip with connections is deleted, the connected clips are also deleted. Logically, this makes sense: a shot of a car should be connected to a person talking about that car. It's even clearer for sound effects: a sound effect of a car backfiring belongs to a specific time within a shot of a car. Music behaves a little differently though.
 
 In the Viewer, you'll only see the clip that's highest in the stack at a point in time, and if the wrong clip is on top, you can drag clips directly up or down to change the stacking order. (**A quick tip: hold ⇧ as you move a clip up or down to avoid also moving it in time.**)
@@ -256,7 +259,7 @@ If you place music or a longer voiceover in a Storyline, you can use the Range S
 
 ### Controlling and overriding connections
 
-First, if you want to connect a clip at a different point, hold `⌥ ⌘` and click on the connected clip. The connection will now be shifted to the clicked point in time, connecting to the clip on the Primary Storyline at that timecode. The same applies to Storylines, but you'll have to hold ⌥⌘ and click in the gray bar just above the clips instead
+First, if you want to connect a clip at a different point, hold `⌥ ⌘` and click on the connected clip. The connection will now be shifted to the clicked point in time, connecting to the clip on the Primary Storyline at that time code. The same applies to Storylines, but you'll have to hold ⌥⌘ and click in the gray bar just above the clips instead
 Moving connections like this lets you change which Primary Storyline clip "owns" a connected clip. As connected items are moved or deleted when a Primary Storyline clip is moved or deleted, this lets you decide which primary clips control those connected clips
 
 If you don't want the connected clip to move:
@@ -284,9 +287,9 @@ But you can flip that "source clip dominance" around by explicitly placing two o
 5. Press Q to connect the selected clip:
 If the source clip has enough media to fill the selected region of the timeline, a clip will be connected to just that region. It'll start from the In point you chose in the Browser, and run for the length you chose in the timeline, but the Out point in the Browser (chosen or implied) will be ignored. The Skimmer is also ignored, if present.
 
-### Backtiming
+### Back-timing
 
-From time to time, it can be more important what's at the end of a connected clip rather than the beginning, and there's a solution for that too. Instead of picking an In point in the Browser, press O to pick an Out point. And instead of pressing Q to connect, press Shift Q to perform a backtimed connect. This option places the Out point from the Browser clip at the Out point in the Timeline, then uses as much media before that point as the timeline region requires.
+From time to time, it can be more important what's at the end of a connected clip rather than the beginning, and there's a solution for that too. Instead of picking an In point in the Browser, press O to pick an Out point. And instead of pressing Q to connect, press Shift Q to perform a back-timed connect. This option places the Out point from the Browser clip at the Out point in the Timeline, then uses as much media before that point as the timeline region requires.
 
 t's possible to Overwrite with two points on a source clip and a third on the timeline, but it's more common to put two on the timeline, as before:
 
@@ -294,7 +297,7 @@ t's possible to Overwrite with two points on a source clip and a third on the ti
 2. On the timeline, skim to a point where you want to add the connected clip, and press I to mark an In point.
 3. Skim to where you want to end the connected clip.
 4. Press O to mark an Out point.
-5. Press D to Overwrite the selected clip, or ⇧D to Overwrite with backtiming (from the Out point back)
+5. Press D to Overwrite the selected clip, or ⇧D to Overwrite with back-timing (from the Out point back)
 
 What's different? This isn't a connection above the Primary Storyline but a replacement of the clips currently on the Primary Storyline. This is not an easily reversible operation, and any clips or regions within the selection will be entirely overwritten. Why do this? Well, I confess that I almost never do. If you want to use the Primary Storyline rather than connecting clips, then I can see the appeal, but I find connecting a clip above does what I want and lets any audio from the primary be heard.
 One exception: you might want to Overwrite a clip into a connected Storyline. That's possible, but you'll have to select the Storyline (not a clip within the Storyline) before you press D or ⇧D. Again, that's not something I usually do, as I prefer to Replace — but that's coming up in the next chapter. Lastly, let's clarify copy and paste
@@ -335,7 +338,7 @@ As you might expect, you can only Roll a clip as far as the media allows. If you
 
 While you probably won't have any trouble triggering the Roll operation, the Trim tool still actually allows you to perform a regular one-point trim operation — you just have to be more specific about where you place the mouse. As you move toward the center of where two edits meet, the cursor switches to indicate a two-point Roll, but if you move a little further toward either side, the cursor will change back to indicate a regular one-point trim
 
-To select two points for a Roll edit `press \` this selects both Out and In points around the playhead.
+To select two points for a Roll edit `press \` this selects both Out and In points around the play head.
 The `\` key is to the right of `[` and `]` on North American keyboards, so it's physically nearby. It's entirely up to you if you prefer a hybrid mouse/keyboard approach or the keyboard-only way instead, but if you would prefer to hover with the mouse and then switch to the keyboard, be sure to activate Snapping (N)
 
 ### Using a Slip edit
@@ -392,7 +395,7 @@ Overlapping two edits is often necessary to smooth out the edges of words, espec
 
 1. Use the Range Selection tool to select the unwanted part of a clip.
 2. Press delete to remove it.
-3. Select both clips at once, then press ⌥T (or Modify > Adjust Audio Fades > Crossfade) to add a Crossfade.
+3. Select both clips at once, then press ⌥T (or Modify > Adjust Audio Fades > Cross-fade) to add a Cross-fade.
 
 The clip's fade handles are now activated, and the two clips are overlapped by a duration set in Preferences, under Editing. That might be enough; you can play it back to see whether it sounds good. From there, you can adjust the results with a more manual process if you wish:
 
@@ -405,7 +408,7 @@ Don't be dishonest, but also don't be afraid to make a speaker sound smoother or
 
 ### Fading audio edits
 
-As you've seen, adding a Crossfade exposes a clip's fade handles, but every audio edge contains the same built-in fade handles. They allow you to fade that audio in or out and are a vital part of making audio edits seamless. Audio fades are also a good way to create a smooth transition between one music track and another.
+As you've seen, adding a Cross-fade exposes a clip's fade handles, but every audio edge contains the same built-in fade handles. They allow you to fade that audio in or out and are a vital part of making audio edits seamless. Audio fades are also a good way to create a smooth transition between one music track and another.
 
 You should use fades on almost every audio edit, to make sure that every audio clip starts in silence and ends in silence. If an audio clip cuts in the middle of a noise, you can sometimes hear a click or a pop as the audio cuts in. To make applying audio fades easier, you can apply shortcuts (with Final Cut Pro > Commands > Customize, ⌥⌘K) to the following otherwise hidden commands:
 
@@ -414,7 +417,7 @@ You should use fades on almost every audio edit, to make sure that every audio c
 - Toggle Audio Fade In
 - Toggle Audio Fade Out
 
-While the handles are the same on each clip, a Crossfade defaults to the S-curve fade style, and a standard clip's edges will default to +3dB. You can choose your own style with a right-click on the handle.
+While the handles are the same on each clip, a Cross-fade defaults to the S-curve fade style, and a standard clip's edges will default to +3dB. You can choose your own style with a right-click on the handle.
 
 ## Editing numerically and with the Precision Editor
 
@@ -422,13 +425,13 @@ Not every editor will want to be precise; editing is, after all, an art more tha
 
 ### Trimming using numbers
 
-While the comma and period shortcuts move a selected edit point (or clip) by a single frame, you can use plus and minus with timecodes to move by any amount. To illustrate how to respond to the client who asks for "a second more," follow these steps:
+While the comma and period shortcuts move a selected edit point (or clip) by a single frame, you can use plus and minus with time-codes to move by any amount. To illustrate how to respond to the client who asks for "a second more," follow these steps:
 
 1. Select an Out point on one of your clips
-You could do this by simply clicking on the Out point, or by moving the playhead to that point with keys, then selecting it with the ] shortcut. While ] selects the Out point, use [ to select the In point, or \ to select both for a Roll edit
+You could do this by simply clicking on the Out point, or by moving the play head to that point with keys, then selecting it with the ] shortcut. While ] selects the Out point, use [ to select the In point, or \ to select both for a Roll edit
 
-2. Type +100, then return, which will result in The timecode display under the viewer will change when you type the "+"
-Movements to the right use a plus, and to the left use a minus. Timecode entry is interpreted differently, depending on how many characters you type, as follows:
+2. Type +100, then return, which will result in The time-code display under the viewer will change when you type the "+"
+Movements to the right use a plus, and to the left use a minus. Time-code entry is interpreted differently, depending on how many characters you type, as follows:
 
 - If you enter one or two digits, you're talking in frames.
 - If you enter three or four digits, the first two digits are seconds and the last two are frames.
@@ -436,7 +439,7 @@ Movements to the right use a plus, and to the left use a minus. Timecode entry i
 - If you enter a period (.), it counts as two zeros: "00".
 - If you enter a number greater than the number of units available (such as 80 frames or 65 seconds), then the extra amount is converted to the next unit up.
 
-In the timecode display underneath the Viewer, you'll see the result calculate itself as you type. Here are a few examples:
+In the time-code display underneath the Viewer, you'll see the result calculate itself as you type. Here are a few examples:
 
 - +215 = move the selected edit point 2 seconds and 15 frames to the right
 - +265 = move the selected edit point 4 seconds and 15 frames to the right (in a 25 frames per second (FPS) timeline, where 2 seconds and 65 frames = 4 seconds + 15 frames)
@@ -451,14 +454,14 @@ Moving a clip rather than an edit works in exactly the same way, but beware. Con
 No matter what you want to move, you can use the following general-purpose precision workflow:
 
 1. Select an edit point on one of your clips with the Select tool, select two edit points with the Trim tool, or select a whole clip.
-2. Type plus or minus, then a timecode, then return.
+2. Type plus or minus, then a time-code, then return.
 
 ### Setting clip duration
 
 What if your client asks for a clip to be not "a second longer" but "exactly 4 seconds"? That's easy, but you'll need to use something other than plus or minus. The command is Modify > Change Duration but you'll use ⌃D. To set duration, do the following:
 
 Select one or more clips.
-Type ⌃D, then a timecode (without ⌃), then return. This will result in the timecode readout under the Viewer changes to show the new duration
+Type ⌃D, then a time-code (without ⌃), then return. This will result in the time-code readout under the Viewer changes to show the new duration
 
 Here are some examples, remembering that you only hold ⌃ while pressing D, and you'll need to press return at the end of each one:
 
@@ -474,9 +477,9 @@ Here are some examples, remembering that you only hold ⌃ while pressing D, and
 4. Press ⌃D3. to set all clips to 3 seconds long.
 5. Press ⌘T to add the default Dissolve transition between all these clips, as illustrated in the following screenshot:
 
-### Moving to a specific timecode
+### Moving to a specific time-code
 
-If you want to jump to a specific timecode on the timeline it's a similar process, but you'll need to activate the Move Playhead Position command before typing that timecode. The shortcut is ⌃P, and should be followed immediately by a timecode in seconds and frames.
+If you want to jump to a specific time-code on the timeline it's a similar process, but you'll need to activate the Move Play head Position command before typing that time-code. The shortcut is ⌃P, and should be followed immediately by a time-code in seconds and frames.
 
 ## Using the Precision Editor
 
