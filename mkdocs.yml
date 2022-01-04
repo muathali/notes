@@ -6,12 +6,9 @@ nav:
   - Architecture:
     - 'Introduction': architecture/index.md
     - 'Streaming': architecture/streams.md
-    - 'Kafka': architecture/kafka.md
-    - 'Avro': architecture/avro.md
     - 'State Stores': architecture/state-stores.md
     - 'Initial Load': architecture/init-load.md
   - 'Programming':
-    - 'C#': programming/csharp.md
     - 'Learning Angular': programming/learning-angular.md
     - 'Angular Material': programming/angular-material.md
   - 'AWS':
@@ -22,7 +19,9 @@ nav:
     - 'General': azure/general.md
     - 'Azure VMs': azure/azure-vm.md
   - 'Tools':
+    - 'Commands': tools/commands.md
     - 'Docker': tools/docker.md
+    - 'Avro': tools/avro.md
     - 'Mac OS': tools/mac-os.md
   - 'Photography':
     - 'Final Cut Pro': light/fcp.md
