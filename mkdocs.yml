@@ -9,7 +9,7 @@ nav:
     - 'State Stores': architecture/state-stores.md
     - 'Initial Load': architecture/init-load.md
   - 'Programming':
-    - 'Learning Angular': programming/learning-angular.md
+    - 'Angular': programming/angular.md
     - 'Angular Material': programming/angular-material.md
   - 'AWS':
     - 'Private Link': aws/private-link.md
