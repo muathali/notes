@@ -162,6 +162,18 @@ Observables return a stream of events, and our subscribers receive prompt notifi
 
 That's not all, however. This stream can be a combination of many operations before they hit observers subscribed to it. Just as we can manipulate arrays with methods such as map or filter to transform them, we can do the same with the stream of events that are emitted by observables. This is known as reactive functional programming, and Angular makes the most of this paradigm to handle asynchronous information.
 
+> Use the async pipe in your templates to reflect the current value of an observable.
+
+## Services
+
+In Angular, services are singletons, meaning when they are first created in memory, they're kept alive as long as the module they're a part of is in memory. From a practical perspective, this will mean that most services in your application will live in the memory for the lifetime of the application. However, the lifetime of a component may be much shorter and there could be multiple instances of the same component created over and over again. If we don't manage the interactions between long-lived and short-lived objects carefully, we can end up with dangling references between objects, leading to memory leaks.
+
+we should only subscribe to an observable stream to activate it. If we treat a subscribe function as an event handler, then we're implementing our code imperatively.
+
+Seeing anything other than an empty .subscribe() call in your code base should be considered a sign of ditching reactive programming.
+
+In reactive programming, when you subscribe to an event in a reactive stream, then you're shifting your coding paradigm from reactive programming to imperative programming
+
 ## Routing
 
 Modern and traditional web applications react differently when a URL changes inside the app. The architecture of each browser plays an essential part in this behavior. Older browsers initiate a new request to the server when the URL changes. Modern browsers, also known as HTML5 browsers, can change the URL and the history of the browser, when navigating in different views, without sending a request to the server using a technique called **HTML5 pushState**
@@ -185,6 +197,18 @@ An Angular application must set the base HTML tag in the index.html file to enab
 ```
 
 The `href` attribute informs the browser about the path it should follow when attempting to load external resources, such as media or CSS files, once it goes deeper into the URL hierarchy
+
+### Generating router-enabled modules
+
+Create a new Angular app, with routing and Angular Material configured from the get-go
+
+```bash
+ng  new lemon-mart --routing --strict
+ng add @angular/material
+npm i @angular/flex-layout
+ng g m material --flat -m app
+ng g m manager -m app --routing
+```
 
 ## Notes
 The backtick character defines a template literal, which allows newlines to be defined without having to concatenate strings with a plus operator

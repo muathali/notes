@@ -3,7 +3,7 @@ site_url: https://example.com/
 
 nav:
   - Home: index.md
-  - Architecture:
+  - 'Architecture':
     - 'Introduction': architecture/index.md
     - 'Streaming': architecture/streams.md
     - 'State Stores': architecture/state-stores.md
@@ -11,6 +11,7 @@ nav:
   - 'Programming':
     - 'Angular': programming/angular.md
     - 'Angular Material': programming/angular-material.md
+    - 'Type Script': programming/type-script.md
   - 'AWS':
     - 'Private Link': aws/private-link.md
     - 'Glue': aws/aws-glue.md
