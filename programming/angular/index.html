@@ -8,22 +8,21 @@
       
       
       
-      
-        <link rel="canonical" href="https://example.com/programming/learning-angular/">
+        <link rel="canonical" href="https://example.com/programming/angular/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.9">
     
     
       
-        <title>Learning Angular - Muath's Notes</title>
+        <title>Angular - Muath's Notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1fe995fd.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2b4465f4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -33,14 +32,13 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -57,9 +55,8 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
-      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learning-angular" class="md-skip">
+        <a href="#angular" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +73,12 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Muath&#39;s Notes" class="md-header__button md-logo" aria-label="Muath's Notes" data-md-component="logo">
       
@@ -97,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learning Angular
+              Angular
             
           </span>
         </div>
@@ -111,7 +113,7 @@
           <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
             </label>
           
         
@@ -131,19 +133,22 @@
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -160,13 +165,9 @@
     
     
   </nav>
-</header>
+  
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
@@ -275,7 +276,7 @@
   
     <li class="md-tabs__item">
       <a href="../../light/fcp/" class="md-tabs__link">
-        Light
+        Photography
       </a>
     </li>
   
@@ -284,6 +285,13 @@
     </ul>
   </div>
 </nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -340,10 +348,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
-      <label class="md-nav__link" for="__nav_2">
-        Architecture
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Architecture" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
@@ -352,6 +364,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -362,8 +375,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -374,8 +389,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -386,8 +403,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -398,6 +417,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -420,10 +440,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
-      <label class="md-nav__link" for="__nav_3">
-        Programming
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Programming
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Programming" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
@@ -432,6 +456,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
     
@@ -446,15 +471,16 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Learning Angular
+          Angular
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Learning Angular
+        Angular
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -469,6 +495,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#philosophy" class="md-nav__link">
+    Philosophy
+  </a>
+  
+    <nav class="md-nav" aria-label="Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperative-vs-reactive-programming" class="md-nav__link">
+    Imperative vs Reactive Programming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rxjs" class="md-nav__link">
+    RxJS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-an-angular-app" class="md-nav__link">
+    Structure an Angular App
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure an Angular App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-an-angular-component" class="md-nav__link">
+    Anatomy of an Angular Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-versioning" class="md-nav__link">
+    Semantic Versioning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    Binding
+  </a>
+  
+    <nav class="md-nav" aria-label="Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#displaying-data-from-the-component" class="md-nav__link">
     Displaying data from the component
   </a>
@@ -501,18 +589,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getting-data-from-the-template-event-binding" class="md-nav__link">
     Getting data from the template (event binding)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#communicating-with-other-components" class="md-nav__link">
     Communicating with other components
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -533,13 +626,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure-an-angular-app" class="md-nav__link">
-    Structure an Angular App
-  </a>
   
 </li>
       
@@ -578,8 +664,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#routing" class="md-nav__link">
     Routing
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-router-enabled-modules" class="md-nav__link">
+    Generating router-enabled modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -591,8 +704,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -603,6 +718,21 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type-script/" class="md-nav__link">
+        Type Script
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
@@ -623,10 +753,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
-      <label class="md-nav__link" for="__nav_4">
-        AWS
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          AWS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="AWS" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
@@ -635,6 +769,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -645,8 +780,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -657,8 +794,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -669,6 +808,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -689,10 +829,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
-      <label class="md-nav__link" for="__nav_5">
-        Azure
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Azure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Azure" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
@@ -701,6 +845,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -711,8 +856,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -723,6 +870,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -743,10 +891,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
-      <label class="md-nav__link" for="__nav_6">
-        Tools
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Tools" data-md-level="1">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
@@ -755,6 +907,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -765,8 +918,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -777,8 +932,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -789,8 +946,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -801,6 +960,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -821,18 +981,23 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      <label class="md-nav__link" for="__nav_7">
-        Light
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Light" data-md-level="1">
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Photography
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Photography" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          Light
+          Photography
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -843,8 +1008,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../light/fcp-shortcuts/" class="md-nav__link">
+        FCP Shortcuts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -855,6 +1036,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -874,6 +1056,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -888,6 +1071,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#philosophy" class="md-nav__link">
+    Philosophy
+  </a>
+  
+    <nav class="md-nav" aria-label="Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperative-vs-reactive-programming" class="md-nav__link">
+    Imperative vs Reactive Programming
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rxjs" class="md-nav__link">
+    RxJS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-an-angular-app" class="md-nav__link">
+    Structure an Angular App
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure an Angular App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anatomy-of-an-angular-component" class="md-nav__link">
+    Anatomy of an Angular Component
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-versioning" class="md-nav__link">
+    Semantic Versioning
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binding" class="md-nav__link">
+    Binding
+  </a>
+  
+    <nav class="md-nav" aria-label="Binding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#displaying-data-from-the-component" class="md-nav__link">
     Displaying data from the component
   </a>
@@ -920,18 +1165,23 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#getting-data-from-the-template-event-binding" class="md-nav__link">
     Getting data from the template (event binding)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#communicating-with-other-components" class="md-nav__link">
     Communicating with other components
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -952,13 +1202,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#structure-an-angular-app" class="md-nav__link">
-    Structure an Angular App
-  </a>
   
 </li>
       
@@ -997,8 +1240,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#routing" class="md-nav__link">
     Routing
+  </a>
+  
+    <nav class="md-nav" aria-label="Routing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-router-enabled-modules" class="md-nav__link">
+    Generating router-enabled modules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -1015,19 +1285,56 @@
             <article class="md-content__inner md-typeset">
               
                 
-                
-                <h1 id="learning-angular">Learning Angular</h1>
-<h2 id="displaying-data-from-the-component">Displaying data from the component</h2>
-<h3 id="interpolation">Interpolation</h3>
+
+<h1 id="angular">Angular</h1>
+<h2 id="philosophy">Philosophy</h2>
+<p>The philosophy behind Angular is to err on the side of configuration over convention. Convention-based frameworks, although they may seem elegant from the outside, make it difficult for newcomers to pick up the framework. Configuration-based frameworks, however, aim to expose their inner workings through explicit configuration and hooks, where you can attach your custom behavior to the framework. In essence, where AngularJS had tons of magic, which can be confusing, unpredictable, and challenging to debug, Angular tries to be non-magical</p>
+<p>Configuration over convention results in verbose coding. Verbosity is a good thing. Terse code is the enemy of maintainability, only benefiting the original author. As Andy Hunt and David Thomas put it in The Pragmatic Programmer: Remember that you (and others after you) will be reading the code many hundreds of times, but only writing it a few times</p>
+<p>Further, Andy Hunt's Law of Design dictates: If you can't rip every piece out easily, then the design sucks</p>
+<h3 id="imperative-vs-reactive-programming">Imperative vs Reactive Programming</h3>
+<p>Angular makes heavy use of the RxJS library, which introduces reactive development patterns to Angular, as opposed to more traditional imperative development patterns</p>
+<p>As a programmer, you are most likely used to imperative programming. Imperative programming is when you, as the programmer, write sequential code describing everything that must be done in the order that you've defined them and the state of your application depending on just the right variables to be set to function correctly. You write loops, conditionals, and call functions; you fire off events and expect them to be handled. Imperative and sequential logic is how you're used to coding</p>
+<p>Reactive programming is a subset of functional programming. In functional programming, you can't rely on variables you've set previously. Every function you write must stand on its own, receive its own set of inputs and return a result without being influenced by the state of an outer function or class. Functional programming supports Test Driven Development (TDD) very well because every function is a unit that can be tested in isolation. As such, every function you write becomes composable. So, you can mix, match, and combine any function you write with any other and construct a series of calls that yield the result you expect</p>
+<p>Reactive programming adds a twist to functional programming. You no longer deal with pure logic, but an asynchronous data stream that you transform and mold into any shape you need with a composable set of functions. So, when you subscribe to an event in a reactive stream, then you're shifting your coding paradigm from reactive programming to imperative programming</p>
+<p>With imperative programming, you must define every step of the code execution. Every step depends on the previous step, which means you must consider the state of the environment to ensure a successful operation. In such an environment, it is easy to forget a step and very difficult to test the correctness of every individual step. In functional reactive programming, you work with asynchronous data streams resulting in a stateless workflow that is easy to compose with other actions</p>
+<h3 id="rxjs">RxJS</h3>
+<p>RxJS stands for Reactive Extensions, which is a modular library that enables reactive programming, which itself is an asynchronous programming paradigm and allows the manipulation of data streams through transformation, filtering, and control functions. You can think of reactive programming as an evolution of event-based programming</p>
+<h2 id="structure-an-angular-app">Structure an Angular App</h2>
+<p>How to create an Angular application that is correctly structured to enforce separation of concerns using modules and services
+An Angular module is a TypeScript class marked with the @NgModule decorator, which defines the following properties:</p>
+<ul>
+<li><strong>declarations</strong>: The components, directives, and pipes that are registered with the module.</li>
+<li><strong>imports</strong>: Other modules that contain declarations to be used by this module. The Angular CLI defines CommonModule automatically for us in this property. It is a module that is always used in Angular applications because it contains all the built-in directives and pipes that we usually would like to use.</li>
+<li><strong>exports</strong>: Angular artifacts that are defined in declarations and are available for other modules to use. This is the public API of the module. It defines what is publicly accessible or not. Everything else that's not explicitly exported would be considered private or internal to the module.</li>
+<li><strong>providers</strong>: Services that are provided from the module and are accessible from any module of the application. We'll learn more about providers in the How dependency injection works in Angular section.</li>
+<li><strong>bootstrap</strong>: The main component of the application that will be rendered when the application starts up. This property is set only once in the main application module, AppModule, and is usually AppComponent. Typically, you should not change it unless there is a particular reason to do so.Important NoteThe main application module, AppModule, does not need to import CommonModule. Instead, it imports BrowserModule, which is used to run Angular applications in a browser platform that exports CommonModule by itself.</li>
+</ul>
+<p>All Angular components, services, directives, pipes, and user controls are organized under modules. Each Angular app is bootstrapped by a root module that renders your first component and injects any services and prepares dependencies it may require. You may introduce children modules to enable capabilities like lazy loading so that you don't have to deliver all components of your web application to the browser all at once</p>
+<h3 id="anatomy-of-an-angular-component">Anatomy of an Angular Component</h3>
+<p><img alt="Angular Component" src="../images/angular-component.png" /></p>
+<blockquote>
+<p>When creating a new Angular application, the first step is to define the different features our application needs. We should keep in mind that each one should make sense on its own in isolation from the others. Once we've defined the set of features required, we will create a module for each one. Each module will then be filled with the components, directives, pipes, and services that shape the feature it represents. Always remember the principles of encapsulation and reusability when defining your feature set. The second step is to start creating components that will be used to visualize the features on the screen.</p>
+</blockquote>
+<h3 id="semantic-versioning">Semantic Versioning</h3>
+<p>The characters in front of the version numbers have specific meanings in semantic versioning
+    The tilde, ~, enables tilde ranges when all three digits of the version number are defined, allowing patch version upgrades to be automatically applied
+    The up-caret character, ^, enables caret ranges, allowing minor version upgrades to be automatically applied
+    A lack of any character signals npm to install that exact version of the library on your machine</p>
+<p>You may notice that major version upgrades aren't allowed to happen automatically. In general, updating packages can be risky. In order to ensure no package is updating without your explicit knowledge, you may install exact version packages by using npm's --save-exact option</p>
+<p>npm install dev-norms --save-dev --save-exact</p>
+<p>Working with stale packages comes with its risks. With npm 6, the npm audit command has been introduced to make you aware of any vulnerabilities discovered in packages you're using. During npm install, if you receive any vulnerability notices, you may execute npm audit to find out details about any potential risk</p>
+<h2 id="binding">Binding</h2>
+<h3 id="displaying-data-from-the-component">Displaying data from the component</h3>
+<h4 id="interpolation">Interpolation</h4>
 <pre><code class="language-html">&lt;span&gt;{{ title }}&lt;/span&gt;
 </code></pre>
-<h3 id="property-binding">Property Binding</h3>
+<h4 id="property-binding">Property Binding</h4>
 <pre><code class="language-html">&lt;span [innerText]=&quot;title&quot;&gt;&lt;/span&gt;
 </code></pre>
 <p>Notice that we bind to the <strong>Document Object Model</strong> (DOM) property of an element, not an HTML attribute, as it looks at first sight.</p>
 <p>The property inside square brackets is called the <strong>target property</strong> and is the property of the DOM element into which we want to bind. The variable on the right is called the <strong>template expression</strong> and corresponds to the <code>public title</code> property of the component. If the property is not public, the template will not be able to use it.</p>
 <p>To better understand how the Angular templating mechanism works, we need to first understand how Angular interacts with attributes and properties. It defines attributes in HTML to initialize a DOM property, and then it uses data binding to interact with the property directly</p>
-<h3 id="applying-styles-to-the-template">Applying styles to the template</h3>
+<h4 id="applying-styles-to-the-template">Applying styles to the template</h4>
 <p>The Angular framework provides two types of property binding to set both of them dynamically, <strong>class binding</strong> and <strong>style binding</strong>. We can apply a single class to an HTML element using the following syntax.</p>
 <pre><code class="language-html">&lt;p [class.star]=&quot;isLiked&quot;&gt;&lt;/p&gt;
 </code></pre>
@@ -1035,13 +1342,13 @@
 If we want to apply multiple classes simultaneously, we can use the following syntax:</p>
 <pre><code class="language-html">&lt;p [class]=&quot;currentClasses&quot;&gt;&lt;/p&gt;
 </code></pre>
-<h2 id="getting-data-from-the-template-event-binding">Getting data from the template (event binding)</h2>
+<h3 id="getting-data-from-the-template-event-binding">Getting data from the template (event binding)</h3>
 <p>An event binding listens for DOM events that occur on the target HTML element and responds to those events by calling corresponding methods in the component.</p>
 <pre><code class="language-html">&lt;button (click)=&quot;onClick()&quot;&gt;Click me&lt;/button&gt;
 </code></pre>
 <p>It supports native DOM events that can be found at <a href="https://developer.mozilla.org/en-US/docs/Web/Events">https://developer.mozilla.org/en-US/docs/Web/Events</a>.</p>
 <p>The variable on the right is called the <strong>template statement</strong> and corresponds to the <code>onClick</code> public method of the component. Component methods must be public for the template to be able to call them.</p>
-<h2 id="communicating-with-other-components">Communicating with other components</h2>
+<h3 id="communicating-with-other-components">Communicating with other components</h3>
 <p>Angular components expose a public API that allows them to communicate with other components. This API encompasses <strong>input properties</strong>, which we use to feed the component with data. It also exposes <strong>output properties</strong> we can bind event listeners to, thereby getting timely information about changes in the state of the component.</p>
 <h2 id="directives">Directives</h2>
 <p>There are three types of directives:</p>
@@ -1057,19 +1364,6 @@ If we want to apply multiple classes simultaneously, we can use the following sy
 <li><strong>ngFor</strong> iterates through a list of items and binds each item to a template.</li>
 <li><strong>ngSwitch</strong> switches between templates within a specific set and displays each one depending on a condition</li>
 </ul>
-<h2 id="structure-an-angular-app">Structure an Angular App</h2>
-<p>How to create an Angular application that is correctly structured to enforce separation of concerns using modules and services
-An Angular module is a TypeScript class marked with the @NgModule decorator, which defines the following properties:</p>
-<ul>
-<li><strong>declarations</strong>: The components, directives, and pipes that are registered with the module.</li>
-<li><strong>imports</strong>: Other modules that contain declarations to be used by this module. The Angular CLI defines CommonModule automatically for us in this property. It is a module that is always used in Angular applications because it contains all the built-in directives and pipes that we usually would like to use.</li>
-<li><strong>exports</strong>: Angular artifacts that are defined in declarations and are available for other modules to use. This is the public API of the module. It defines what is publicly accessible or not. Everything else that's not explicitly exported would be considered private or internal to the module.</li>
-<li><strong>providers</strong>: Services that are provided from the module and are accessible from any module of the application. We'll learn more about providers in the How dependency injection works in Angular section.</li>
-<li><strong>bootstrap</strong>: The main component of the application that will be rendered when the application starts up. This property is set only once in the main application module, AppModule, and is usually AppComponent. Typically, you should not change it unless there is a particular reason to do so.Important NoteThe main application module, AppModule, does not need to import CommonModule. Instead, it imports BrowserModule, which is used to run Angular applications in a browser platform that exports CommonModule by itself.</li>
-</ul>
-<blockquote>
-<p>When creating a new Angular application, the first step is to define the different features our application needs. We should keep in mind that each one should make sense on its own in isolation from the others. Once we've defined the set of features required, we will create a module for each one. Each module will then be filled with the components, directives, pipes, and services that shape the feature it represents. Always remember the principles of encapsulation and reusability when defining your feature set. The second step is to start creating components that will be used to visualize the features on the screen.</p>
-</blockquote>
 <h2 id="dependency-injection">Dependency Injection</h2>
 <p>Angular components are responsible for the presentation logic and should not be concerned with how to get data, either from a static list or a remote endpoint. They only need to display it in the template. Thus, they delegate business logic to services to handle this type of task.</p>
 <p>An Angular service, by default, is not registered with a specific module like components, directives, and pipes are. Instead, it is registered with an injector – the root injector of the Angular application – as defined in the providedIn option</p>
@@ -1094,6 +1388,14 @@ export class HeroService {
 <p>An observable is an object that maintains a list of dependents, called observers, and informs them about state and data changes by emitting events asynchronously. To do so, the observable implements all of the machinery that it needs to produce and emit such events. It can be fired and canceled any time, regardless of whether it has emitted the expected data already</p>
 <p>Observables return a stream of events, and our subscribers receive prompt notification of those events so that they can act accordingly. They do not perform an asynchronous operation and die (although we can configure them to do so), but start a stream of continuous events on which we can subscribe.</p>
 <p>That's not all, however. This stream can be a combination of many operations before they hit observers subscribed to it. Just as we can manipulate arrays with methods such as map or filter to transform them, we can do the same with the stream of events that are emitted by observables. This is known as reactive functional programming, and Angular makes the most of this paradigm to handle asynchronous information.</p>
+<blockquote>
+<p>Use the async pipe in your templates to reflect the current value of an observable.</p>
+</blockquote>
+<h2 id="services">Services</h2>
+<p>In Angular, services are singletons, meaning when they are first created in memory, they're kept alive as long as the module they're a part of is in memory. From a practical perspective, this will mean that most services in your application will live in the memory for the lifetime of the application. However, the lifetime of a component may be much shorter and there could be multiple instances of the same component created over and over again. If we don't manage the interactions between long-lived and short-lived objects carefully, we can end up with dangling references between objects, leading to memory leaks.</p>
+<p>we should only subscribe to an observable stream to activate it. If we treat a subscribe function as an event handler, then we're implementing our code imperatively.</p>
+<p>Seeing anything other than an empty .subscribe() call in your code base should be considered a sign of ditching reactive programming.</p>
+<p>In reactive programming, when you subscribe to an event in a reactive stream, then you're shifting your coding paradigm from reactive programming to imperative programming</p>
 <h2 id="routing">Routing</h2>
 <p>Modern and traditional web applications react differently when a URL changes inside the app. The architecture of each browser plays an essential part in this behavior. Older browsers initiate a new request to the server when the URL changes. Modern browsers, also known as HTML5 browsers, can change the URL and the history of the browser, when navigating in different views, without sending a request to the server using a technique called <strong>HTML5 pushState</strong></p>
 <p>An Angular application must set the base HTML tag in the index.html file to enable pushState routing</p>
@@ -1112,11 +1414,19 @@ export class HeroService {
 &lt;/html&gt;
 </code></pre>
 <p>The <code>href</code> attribute informs the browser about the path it should follow when attempting to load external resources, such as media or CSS files, once it goes deeper into the URL hierarchy</p>
-                
-              
-              
-                
-
+<h3 id="generating-router-enabled-modules">Generating router-enabled modules</h3>
+<p>Create a new Angular app, with routing and Angular Material configured from the get-go</p>
+<pre><code class="language-bash">ng  new lemon-mart --routing --strict
+ng add @angular/material
+npm i @angular/flex-layout
+ng g m material --flat -m app
+ng g m manager -m app --routing
+</code></pre>
+<h2 id="notes">Notes</h2>
+<p>The backtick character defines a template literal, which allows newlines to be defined without having to concatenate strings with a plus operator</p>
+<p>The bootstrap process of Angular is, admittedly, a bit convoluted. This is the chief reason the Angular CLI exists. index.html contains an element named <app-root>. When Angular begins execution, it first loads main.ts, which configures the framework for browser use and loads the app module. The app module then loads all its dependencies and renders within the aforementioned <app-root> element</p>
+<p>You can put any code that initializes other classes or variables inside a constructor. However, you shouldn't make an HTTP call or attempt to access DOM elements from a constructor. This is where the OnInit life cycle hook comes into play</p>
+<p>Classes can have properties, variables, and functions. From an Angular template, you can access any property, variable, or function inside of an expression. The syntax of an expression looks like {{ expression }}, [target]="expression", (event)="expression" or *ngIf="expression"</p>
 
               
             </article>
@@ -1125,8 +1435,7 @@ export class HeroService {
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
@@ -1165,14 +1474,15 @@ export class HeroService {
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -1182,10 +1492,10 @@ export class HeroService {
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.960e086b.min.js"></script>
       
     
   </body>
