@@ -16,9 +16,6 @@ nav:
     - 'Private Link': aws/private-link.md
     - 'Glue': aws/aws-glue.md
     - 'Date Pipeline': aws/aws-data-pipeline.md
-  - 'Azure':
-    - 'General': azure/general.md
-    - 'Azure VMs': azure/azure-vm.md
   - 'Tools':
     - 'Commands': tools/commands.md
     - 'Docker': tools/docker.md
