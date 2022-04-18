@@ -1,6 +1,6 @@
 site_name: Muath's Notes
 site_url: https://example.com/
-
+# mkdocs gh-deploy
 nav:
   - Home: index.md
   - 'Architecture':
